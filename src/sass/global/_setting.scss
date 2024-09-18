@@ -2,34 +2,148 @@
 
 // インナー幅設定
 // コンテンツのインナー幅（最も共通の幅が多い部分）
-$inner: 1100px;
+$inner: 1200px;
 // ※キュンパス幅ではなくインナーの幅を指す
 
 // 余白
 $padding-pc: 25px;
 $padding-sp: 20px;
 
-////////////////////
-// フォント設定
-////////////////////
+// ========================================
+// フォントの指定
+// ========================================
 
-$base-font-family: "";
-$second-font-family: "";
+$base-font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
 // ※検証ツールでしっかり反映されているか確認する
-
-body {
-  font-family: $base-font-family;
-}
 
 // フォントウェイト
 $regular: 300;
-$normal: 400;
+$normal: 500;
 $bold: 700;
 
-////////////////////
+
+// ========================================
 // 色の指定
-////////////////////
+// ========================================
 
 //色指定（共通性のあるものは出来る限り指定すると良い）
 $black: #111;
 $white: #fff;
+$gray: #707070;
+$accent-color1: #FF4D00;
+$accent-color2: #FFEB00;
+$color1: #D3F3FF;
+$color2: #1555FF;
+$color3: #164E9D;
+$color4: #171C61;
+
+// ========================================
+// ブレイクポイントの指定
+// ========================================
+
+// どっちファーストの設定（"sp" or "pc"）
+$startFrom: sp;
+
+// デフォルト値を設定
+$mediaquerys: (
+  sm: "screen",
+  md: "screen",
+  lg: "screen",
+  xl: "screen",
+);
+
+@if $startFrom == sp {
+  //スマホファースト
+  $breakpoints: (
+    sm: 600,
+    md: 900,
+    lg: 1024,
+    xl: 1440,
+  );
+
+  //メディアクエリー
+  $mediaquerys: (
+    sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
+    md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
+    lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
+    xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+  );
+
+} @else {
+  $breakpoints: (
+    xl: 1440,
+    lg: 1023,
+    md: 899,
+    sm: 600,
+  );
+  $mediaquerys: (
+    sm: "screen and (max-width: #{map-get($breakpoints,'sm')}px)",
+    md: "screen and (max-width: #{map-get($breakpoints,'md')}px)",
+    lg: "screen and (max-width: #{map-get($breakpoints,'lg')}px)",
+    xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+  );
+
+
+}
+
+// @include mq(){}で書くとブレークポイントが反映される（初期値はmd）
+@mixin mq($mediaquery: md) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}
+
+@if $startFrom == sp {
+  //pcで表示
+  .u-desktop {
+    display: none;
+    @include mq("md") {
+      display: block;
+    }
+  }
+
+  //モバイルのみ表示
+  .u-mobile {
+    @include mq("md") {
+      display: none;
+    }
+  }
+} @else {
+  //pcで表示
+  .u-desktop {
+    display: block;
+    @include mq("md") {
+      display: none;
+    }
+  }
+
+  //モバイルのみ表示
+  .u-mobile {
+    display: none;
+    @include mq("md") {
+      display: block;
+    }
+  }
+}
+
+// ========================================
+// ALL
+// ========================================
+
+body {
+  font-family: $base-font-family;
+  font-weight: $normal;
+  color: $black;
+}
+
+// hover
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s;
+  @include mq("md") {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

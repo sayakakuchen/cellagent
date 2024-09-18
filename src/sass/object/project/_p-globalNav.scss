@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.p-globalNav {
+
+}
+
+.p-globalNav__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // gap: rem(15) rem(0);
+    margin: 0 auto;
+    @include mq(md) {
+        display: flex;
+        gap: rem(80);
+    }
+}
+
+.p-globalNav__item {
+    font-size: rem(13);
+    line-height: calc(23/13);
+    height: 100%;
+}
+
+.p-globalNav__item a {
+    display: block;
+    height: inherit;
+}
