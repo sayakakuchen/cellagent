@@ -1,0 +1,53 @@
+@use "global" as *;
+
+@use 'global' as *;
+
+.c-hamburger {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #007577;  // 後で$whiteに変更する
+    border-bottom-left-radius: 15px;
+}
+
+.c-hamburger span {
+    position: absolute;
+    display: inline-block;
+    height: 1px;
+
+    right: 15%;
+    transition: all 0.3s;
+    background-color: $white;  // 後で#1065ffに変更
+}
+
+.c-hamburger span:nth-child(1) {
+    width: rem(36);
+    top: calc(50% - rem(8));
+}
+
+.c-hamburger span:nth-child(2) {
+    width: rem(25);
+    top: 50%;
+}
+
+.c-hamburger span:nth-child(3) {
+    width: rem(25);
+    top: calc(50% + rem(8));
+}
+
+.c-hamburger.is-active {
+    span:nth-child(1) {
+        top: 50%;
+        right: 15%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+    span:nth-child(2) {
+        opacity: 0;
+    }
+    span:nth-child(3) {
+        width: rem(36);
+        top: 50%;
+        right: -15%;
+        transform: translateX(-50%) rotate(-45deg);
+    }
+}

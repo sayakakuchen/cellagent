@@ -2,12 +2,12 @@
 
 // sp四角青に白字
 .c-btn {
-    width: 100%;
-    max-width: rem(476);
-    padding: rem(15) rem(20);
+    width: 50%;
+    padding: rem(18) rem(10);
     display: inline-flex;
     align-items: center;
-    font-size: rem(20);
+    justify-content: center;
+    font-size: rem(14);
     font-weight: $bold;
     line-height: calc(20/20);
     color: $white;
@@ -15,9 +15,13 @@
 }
 
 .c-btn span {
-    position: relative;
-    padding-right: rem(30);
+	position: relative;
+    padding-right: rem(25);
 }
+
+// .c-btn span::before,
+// .c-btn span::after {
+// }
 
 .c-btn span::after {
     background-color: $white;
@@ -27,16 +31,79 @@
     mask-repeat: no-repeat;
     mask-size: cover;
     position: absolute;
-    width: rem(12);
-    height: rem(12);
+    width: rem(13);
+    height: rem(13);
     top: 50%;
     right: 0;
+    transform: translateY(-50%);
 }
 
-// // sp四角赤に白
-// .c-btn--sq-orange {
-//     background-color: $accent-color1;
-// }
+// sp四角赤に白
+.c-btn--orange,
+.c-btn--sm-orange,
+.c-btn--lg-orange {
+    background-color: $accent-color1;
+}
+
+.c-btn--sm-blue,
+.c-btn--sm-orange {
+    display: none;
+    @include mq(md) {
+        display: inline-flex;
+        width: rem(200);
+        height: rem(40);
+        max-width: rem(200);
+        border-radius: 20px;
+        font-size: rem(13);
+        letter-spacing: 0.06em;
+        line-height: calc(20/13);
+    }
+}
+
+.c-btn--sm-blue span,
+.c-btn--sm-orange span {
+    padding-right: rem(21);
+}
+
+.c-btn--lg-blue,
+.c-btn--lg-orange {
+    margin: 0 rem(4) rem(4) 0;
+    padding: rem(18) rem(30);
+    width: rem(349);
+    height: rem(60);
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    line-height: calc(20/20);
+    border-radius: 50px;
+    flex-direction: column;
+    @include mq(md) {
+    }
+}
+
+.c-btn--lg-blue {
+    background-color: $white;
+    color: $color2;
+    filter: drop-shadow(4px 4px 0px #0033bc);
+}
+
+.c-btn--lg-orange {
+    filter: drop-shadow(4px 4px 0px #B13906);
+}
+
+.c-btn--lg-blue span,
+.c-btn--lg-orange span {
+    padding-right: rem(30);
+}
+
+.c-btn--lg-blue span::after {
+    background-color: $color2;
+}
+
+.c-btn--lg-blue span::after,
+.c-btn--lg-orange span::after {
+    width: rem(20);
+    height: rem(20);
+}
 
 // // sp.pc
 
@@ -59,17 +126,7 @@
 
 // // pc
 // .c-btn--sm-blue {
-//     padding: rem(13) rem(30);
-//     max-width: rem(200);
-//     background-color: $color2;
-//     color: $white;
-//     box-shadow: none;
-//     margin: 0;
-//     border-radius: 20px;
-//     font-size: rem(13);
-//     letter-spacing: 0.06em;
-//     line-height: calc(20/20);
-//     text-align: center;
+
 // }
 
 // .c-btn--sm-orange {

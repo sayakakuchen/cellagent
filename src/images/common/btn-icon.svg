@@ -1,4 +1,5 @@
-<svg id="グループ_3325" data-name="グループ 3325" xmlns="http://www.w3.org/2000/svg" width="12.675" height="12.675" viewBox="0 0 12.675 12.675">
-  <path id="パス_376" data-name="パス 376" d="M312.374,27.653a6.338,6.338,0,1,1-6.338-6.337,6.338,6.338,0,0,1,6.338,6.337" transform="translate(-299.699 -21.316)" fill="#fff"/>
-  <path id="パス_377" data-name="パス 377" d="M306.114,26.038v4.907l3.974-2.453Z" transform="translate(-301.436 -22.155)" fill="#164e9d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+  <g id="グループ_3792" data-name="グループ 3792" transform="translate(-3831.199 -4042.816)">
+    <path id="前面オブジェクトで型抜き_1" data-name="前面オブジェクトで型抜き 1" d="M-234.3,3119.315a10.011,10.011,0,0,1-10-10,10.011,10.011,0,0,1,10-10,10.012,10.012,0,0,1,10,10A10.012,10.012,0,0,1-234.3,3119.315Zm-2.148-13.961v7.923l5.606-3.961-5.606-3.962Z" transform="translate(4076 944)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
 </svg>

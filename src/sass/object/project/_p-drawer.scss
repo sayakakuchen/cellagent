@@ -1,0 +1,23 @@
+@use "global" as *;
+
+@use 'global' as *;
+
+.p-drawer {
+    position: fixed;
+    width: 100%;
+    height: calc(100vh - rem(44));
+    top: rem(52);
+    left: 0;
+    overflow-y: scroll;
+    background-color: $gray;
+    padding-bottom: rem(90);
+    display: none;
+}
+
+.p-drawer__inner {
+
+}
+
+.p-drawer__globalNav {
+    padding: rem(50) rem(10);
+}
