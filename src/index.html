@@ -30,23 +30,137 @@
 </head>
 
 <body>
-    <header>
 
+    <header class="l-header">
+        <div class="p-header">
+            <div class="p-header__inner">
+                <h2 class="p-header__logo">
+                    <a href="#">
+                        <img src="assets/images/common/logo.svg" alt="レンタル事務長さんのロゴ">
+                    </a>
+                </h2>
+                <div class="p-header__hamburger">
+                    <button class="c-hamburger js-hamburger" type="button" aria-controls="drawer" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="p-header__drawer">
+                    <div class="p-drawer">
+                        <div class="p-drawer__inner">
+                            <div class="p-drawer__globalNav">
+                                <nav class="p-globalNav">
+                                    <ul class="p-globalNav__links p-globalNav__links--flex">
+                                        <li class="p-globalNav__link"><a href="/">レンタル事務長さんとは</a></li>
+                                        <li class="p-globalNav__link"><a href="#">料金プラン</a></li>
+                                        <li class="p-globalNav__link"><a href="#">よくある質問</a></li>
+                                        <li class="p-globalNav__link"><a href="#">コラム・お役立ち情報</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-header__globalNav">
+                    <nav class="p-globalNav">
+                        <ul class="p-globalNav__links">
+                            <li class="p-globalNav__link"><a href="#">レンタル事務長さんとは</a></li>
+                            <li class="p-globalNav__link"><a href="#">料金プラン</a></li>
+                            <li class="p-globalNav__link"><a href="#">よくある質問</a></li>
+                            <li class="p-globalNav__link"><a href="#">コラム・お役立ち情報</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="p-header__btn">
+                    <a href="#" class="c-btn c-btn--sm-blue"><span>資料請求はこちら</span></a>
+                    <a href="#" class="c-btn c-btn--sm-orange"><span>無料相談会を予約する</span></a>
+                </div>
+            </div>
+        </div>
     </header>
+    
     <main>
 
-        <div class="__c-btn">
-            <a href="#" class="c-btn"><span>ボタン四角青(sp)</span></a>
-            <!-- <a href="#" class="c-btn c-btn--orange">ボタン四角赤(sp)</a>
-            <a href="#" class="c-btn c-btn--sm-blue">ボタン小青(pc)</a>
-            <a href="#" class="c-btn c-btn--sm-orange">ボタン小赤(pc)</a>
-            <a href="#" class="c-btn c-btn--lg-blue">ボタン赤(sp.pc)</a>
-            <a href="#" class="c-btn c-btn--lg-orange">ボタン赤(sp.pc)</a> -->
-        </div>
+
 
     </main>
-    <footer>
 
+    <footer class="l-footer">
+        <div class="p-footer">
+            <div class="p-footer__inner l-inner">
+                <div class="p-footer__top">
+                    <div class="p-footer__logo">
+                        <a href="#">
+                            <img src="assets/images/common/logo.svg" alt="レンタル事務長さんのロゴ">
+                        </a>
+                    </div>
+                    <div class="p-footer__globalNav">
+                        <nav class="p-globalNav">
+                            <ul class="p-globalNav__links">
+                                <li class="p-globalNav__link"><a href="#">レンタル事務長さんとは</a></li>
+                                <li class="p-globalNav__link"><a href="#">料金プラン</a></li>
+                                <li class="p-globalNav__link"><a href="#">よくある質問</a></li>
+                                <li class="p-globalNav__link"><a href="#">コラム・お役立ち情報</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="p-footer__bottom">
+                    <p class="p-footer__copy">&copy; 2024 CellAgent, inc. ALL RIGHTS RESERVED.</p>
+                </div>
+                <!-- <div class="p-footer__blocks">
+                    <div class="p-footer__block">
+                        <div class="p-footer__info c-text"> 【本部】<br> 〒602-8155<br> 京都市上京区竹屋町通千本東入上ル主税町1092<br> TEL：（075）841-8521<br> FAX：（075）811-5715 </div>
+                    </div>
+                    <div class="p-footer__block">
+                        <div class="p-footer__navs">
+                            <div class="p-footer__nav">
+                                <ul class="p-footer__links">
+                                    <li class="p-footer__link"><a href="<?php echo $service; ?>">事業紹介</a></li>
+                                    <li class="p-footer__link"><a href="<?php echo $textile; ?>">繊維加工材</a></li>
+                                    <li class="p-footer__link"><a href="<?php echo $pcp; ?>">PCP/MOF</a></li>
+                                </ul>
+                                <ul class="p-footer__links">
+                                    <li class="p-footer__link"><a href="<?php echo $company; ?>">企業情報</a></li>
+                                    <li class="p-footer__link"><a href="<?php echo $message; ?>">メッセージ</a></li>
+                                    <li class="p-footer__link"><a href="<?php echo $mission; ?>">企業理念</a></li>
+                                    <li class="p-footer__link"><a href="<?php echo $about; ?>">会社概要</a></li>
+                                    <li class="p-footer__link"><a href="<?php echo $history; ?>">歴史</a></li>
+                                    <li class="p-footer__link"><a href="<?php echo $office; ?>">主な事業所・ネットワーク</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-footer__nav">
+                                <ul class="p-footer__links">
+                                    <li class="p-footer__link"><a href="<?php echo $sustainability; ?>">サステナビリティ</a></li>
+                                </ul>
+                                <ul class="p-footer__links">
+                                    <li class="p-footer__link"><a href="<?php echo $study; ?>">研究</a></li>
+                                </ul>
+                                <ul class="p-footer__links">
+                                    <li class="p-footer__link"><a href="<?php echo $column; ?>">コラム</a></li>
+                                </ul>
+                                <ul class="p-footer__links">
+                                    <li class="p-footer__link"><a href="<?php echo $news; ?>">最新情報</a></li>
+                                </ul>
+                            </div>
+                            <div class="p-footer__nav">
+                                <ul class="p-footer__links">
+                                    <li class="p-footer__link"><a href="<?php echo $recruit; ?>">採用情報</a></li>
+                                    <li class="p-footer__link"><a href="<?php echo $manufact; ?>">私たちの働き方</a></li>
+                                    <li class="p-footer__link"><a href="<?php echo $voice; ?>">先輩の声</a></li>
+                                    <li class="p-footer__link"><a href="<?php echo $application; ?>">募集要項</a></li>
+                                </ul>
+                                <ul class="p-footer__links">
+                                    <li class="p-footer__link"><a href="<?php echo $contact; ?>">お問い合わせ</a></li>
+                                    <li class="p-footer__link u-mobile"><a href="<?php echo $sitemap; ?>">サイトマップ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
     </footer>
 </body>
 
@@ -92,16 +206,80 @@
 
 ///// 共通パーツ(nav) /////
 <nav class="p-globalNav">
-    <ul class="p-globalNav__list">
-        <li class="p-globalNav__item"><a href="#">レンタル事務長さんとは</a></li>
-        <li class="p-globalNav__item"><a href="#">料金プラン</a></li>
-        <li class="p-globalNav__item"><a href="#">よくある質問</a></li>
-        <li class="p-globalNav__item"><a href="#">コラム・お役立ち情報</a></li>
-        <li class="p-globalNav__item"><a href="#">お問い合わせ</a></li>
+    <ul class="p-globalNav__links">
+        <li class="p-globalNav__link"><a href="#">レンタル事務長さんとは</a></li>
+        <li class="p-globalNav__link"><a href="#">料金プラン</a></li>
+        <li class="p-globalNav__link"><a href="#">よくある質問</a></li>
+        <li class="p-globalNav__link"><a href="#">コラム・お役立ち情報</a></li>
+        <li class="p-globalNav__link"><a href="#">お問い合わせ</a></li>
     </ul>
 </nav>
 
+///// 共通パーツ(ボタン) /////
+<div class="__c-btn">
+    <a href="#" class="c-btn c-btn--blue"><span>資料請求はこちら</span></a>
+    <a href="#" class="c-btn c-btn--orange"><span>無料相談会を予約する</span></a>
+    <a href="#" class="c-btn c-btn--sm-blue"><span>資料請求はこちら</span></a>
+    <a href="#" class="c-btn c-btn--sm-orange"><span>無料相談会を予約する</span></a>
+    <a href="#" class="c-btn c-btn--lg-blue"><span>資料請求はこちら</span></a>
+    <a href="#" class="c-btn c-btn--lg-orange"><span>無料相談会を予約する</span></a>
+</div>
 
+///// 共通パーツ(セクションタイトル) /////
+<div class="p-problem__title">
+    <hgroup class="c-title">
+        <p class="c-title__sub">problem</p>
+        <h2 class="c-title__main c-title__main--border">このような<span>お困り事</span>はありませんか？</h2>
+    </hgroup>
+</div>
+<div class="p-service__title">
+    <hgroup class="c-title">
+        <p class="c-title__sub c-title__sub--lightBlue">service</p>
+        <h2 class="c-title__main"><span>ハイレベルな専門チーム</span>が<br class="u-mobile">貴院をサポートします。</h2>
+    </hgroup>
+</div>
+<div class="p-merit__title">
+    <hgroup class="c-title">
+        <p class="c-title__sub">merit</p>
+        <h2 class="c-title__main"><span>レンタル事務長さん</span>の３つのメリット</h2>
+    </hgroup>
+</div>
+<div class="p-whatwedo__title">
+    <hgroup class="c-title">
+        <p class="c-title__sub">what we do</p>
+        <h2 class="c-title__main"><span>レンタル事務長さん</span>ができること</h2>
+    </hgroup>
+</div>
+<div class="p-improvement__title">
+    <hgroup class="c-title">
+        <p class="c-title__sub">business <br class="u-mobile">improvement</p>
+        <h2 class="c-title__main"><span>レンタル事務長さん</span>による業務改善</h2>
+    </hgroup>
+</div>
+<div class="p-example__title">
+    <hgroup class="c-title">
+        <p class="c-title__sub c-title__sub--lightBlue">example</p>
+        <h2 class="c-title__main c-title__main--blue">活用事例</h2>
+    </hgroup>
+</div>
+<div class="p-introduction__title">
+    <hgroup class="c-title">
+        <p class="c-title__sub">introduction</p>
+        <h2 class="c-title__main c-title__main--blue">導入事例</h2>
+    </hgroup>
+</div>
+<div class="p-price__title">
+    <hgroup class="c-title">
+        <p class="c-title__sub">price</p>
+        <h2 class="c-title__main">料金プラン</h2>
+    </hgroup>
+</div>
+<div class="p-faq__title">
+    <hgroup class="c-title">
+        <p class="c-title__sub c-title__sub--blue">faq</p>
+        <h2 class="c-title__main c-title__main--border c-title__main--blue">よくある質問</h2>
+    </hgroup>
+</div>
 
 
 

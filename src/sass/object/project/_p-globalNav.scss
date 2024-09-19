@@ -1,27 +1,40 @@
 @use "global" as *;
 
 .p-globalNav {
-
+    height: inherit;
 }
 
-.p-globalNav__list {
+.p-globalNav__links {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // gap: rem(15) rem(0);
+    gap: rem(5);
     margin: 0 auto;
     @include mq(md) {
         display: flex;
-        gap: rem(80);
+        height: inherit;
     }
 }
 
-.p-globalNav__item {
-    font-size: rem(13);
-    line-height: calc(23/13);
-    height: 100%;
+.p-globalNav__links--flex {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.p-globalNav__item a {
-    display: block;
+.p-globalNav__link {
+    flex-shrink: 1;
+    font-size: rem(13);
+    line-height: calc(13/13);
     height: inherit;
+    @include mq(md) {
+        white-space: nowrap;
+    }
+}
+
+.p-globalNav__link a {
+    display: inline-flex;
+    align-items: center;
+    height: inherit;
+    padding: rem(5);
 }
