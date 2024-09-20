@@ -11,6 +11,7 @@
     margin: 0 auto;
     @include mq(md) {
         display: flex;
+        gap: clamp(rem(10), 2.5vw, rem(80));
         height: inherit;
     }
 }
@@ -37,4 +38,10 @@
     align-items: center;
     height: inherit;
     padding: rem(5);
+}
+
+.p-globalNav__link--footer {
+    @include mq(md) {
+        font-size: rem(16);
+    }
 }
