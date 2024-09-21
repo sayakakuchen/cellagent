@@ -1,0 +1,150 @@
+@use "global" as *;
+
+.p-merit {
+    padding-block: rem(40) rem(48);
+    background: linear-gradient(180deg, #ebebeb 0%, #ebebeb 67%, #d9d9d9 67%, #d9d9d9 100%);
+    overflow: hidden;
+    @include mq(md) {
+        padding-block: rem(80) rem(60);
+    }
+}
+
+.p-merit__inner.l-inner {
+    max-width: rem(1200);
+}
+
+.p-merit__title {
+
+}
+
+.p-merit__text {
+    margin-top: rem(32);
+    font-weight: $bold;
+    font-size: rem(20);
+    letter-spacing: 0.06em;
+    line-height: calc(26/20);
+    text-align: center;
+    color: $color4;
+    @include mq(md) {
+        margin-top: rem(39);
+        font-size: rem(24);
+    }
+}
+
+.p-merit__cards {
+    margin-top: rem(75);
+    padding-inline: rem(25);
+    max-width: rem(300);
+    margin-inline: auto;
+    @include mq(md) {
+        padding-inline: 0;
+        max-width: unset;
+        margin-inline: 0;
+        margin-top: rem(92);
+        display: grid;
+        gap: rem(45);
+        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.p-merit__card {
+    width: rem(300);
+    // margin-inline: auto;
+    position: relative;
+    background-color: $white;
+    padding-block: rem(60) rem(20);
+    border-radius: 20px;
+    @include mq(md) {
+        width: unset;
+        padding-block: rem(75) rem(20);
+    }
+}
+
+.merit__number {
+    font-weight: $bold;
+    font-size: rem(25);
+    line-height: 1;
+    color: #fff;
+    border-radius: 50%;
+    background-color: $color2;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: rem(70);
+    height: rem(70);
+    top: rem(-35);
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq(md) {
+        font-size: rem(29);
+        width: rem(83);
+        height: rem(83);
+        top: rem(-42);
+    }
+}
+
+.p-merit__cardTitle {
+    font-weight: $bold;
+    font-size: rem(18);
+    letter-spacing: 0.06em;
+    line-height: calc(24/18);
+    text-align: center;
+    color: $color2;
+    @include mq(md) {
+        font-size: rem(21);
+        line-height: calc(30/21);
+        text-align: center
+    }
+}
+
+.p-merit__cardTitle span {
+    color: $accent-color1;
+}
+
+.p-merit__image {
+    margin-top: rem(28);
+    aspect-ratio: 300 / 150;
+    @include mq(md) {
+        margin-top: rem(36);
+        aspect-ratio: 370 / 220;
+    }
+}
+
+.p-merit__card:nth-child(2) .p-merit__image {
+    margin-top: rem(4);
+    @include mq(md) {
+        margin-top: rem(6);
+    }
+}
+
+.p-merit__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.p-merit__description {
+    margin-top: rem(20);
+    font-size: rem(13);
+    line-height: calc(20/13);
+    text-align: center;
+    color: #000;
+    @include mq(md) {
+        font-size: rem(18);
+        line-height: calc(26/18);
+    }
+}
+
+// ========================================
+// slick
+// ========================================
+
+.p-merit__cards .slick-list {
+    overflow: unset;
+}
+
+.slick-initialized .slick-slide {
+    margin-right: rem(365);
+}

@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.p-buttonArea {
+    background-color: $color4;
+    @include mq(md) {
+        background-color: $color2;
+    }
+}
+
+.p-buttonArea__inner {
+
+}
+
+.p-buttonArea__items {
+    padding-top: rem(10);
+    padding-bottom: rem(26);
+    display: flex;
+    flex-direction: column;
+    gap: rem(22);
+    align-items: center;
+    @include mq(md) {
+        padding-top: rem(20);
+        padding-bottom: rem(16);
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+    }
+}
+
+.p-buttonArea__item {
+
+}
+
+.p-buttonArea__c-btn {
+
+}
+
+.p-buttonArea__text {
+    font-weight: $bold;
+    font-size: rem(15);
+    letter-spacing: 0.06em;
+    line-height: calc(20/15);
+    text-align: center;
+    color: $white;
+    padding-bottom: rem(10);
+}

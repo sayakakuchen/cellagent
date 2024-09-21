@@ -25,13 +25,33 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         $('html').toggleClass('is-fixed');
     });
 
-        // ページ読み込み時にPC幅を検出し、幅が900pxを超えたときはメニューを閉じる
-        $(window).resize(function () {
-            if ($(window).width() > 900) {
-              $(".js-hamburger").removeClass("is-active");
-              $(".p-drawer").removeClass("is-active");
-              $(".p-drawer").fadeOut();
-            }
-          });
+    // ページ読み込み時にPC幅を検出し、幅が900pxを超えたときはメニューを閉じる
+    $(window).resize(function () {
+        if ($(window).width() > 900) {
+            $(".js-hamburger").removeClass("is-active");
+            $(".p-drawer").removeClass("is-active");
+            $(".p-drawer").fadeOut();
+        }
+    });
+
+// slick
+//     if (window.matchMedia('(max-width:899px)').matches) {
+//         $('.js-merit-slider').slick({
+//             slidesToShow: 1,
+//             arrows: false,
+//             dots: true,
+//             variableWidth: true,
+//             infinite: false,
+//             centerMode: true,
+//         });
+//     }   else {
+//         $('.slide.slick-initialized').slick('unslick');
+//         }
+//     }
+// sliderSetting();
+// $(window).resize(function(){
+//     sliderSetting();
+// });
+
 
 });
