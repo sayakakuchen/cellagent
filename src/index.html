@@ -24,8 +24,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- slick css -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- slick js -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script defer src="./assets/js/script.js"></script>
 </head>
 
@@ -87,13 +91,8 @@
                 <div class="p-fv__inner l-inner">
                     <div class="p-fv__texts">
                         <img src="assets/images/common/fv_text.png" alt="開業医の皆様の右腕に。クリニック専門事務長代行">
-                        <div class="p-fv__textBox u-mobile">
-                            <p class="p-fv__text">人事採用から<br>集患まで</p>
-                            <p class="p-fv__text">業務の<br>丸投げ可能</p>
-                            <p class="p-fv__text">従業員の<br>勤務満足度<br>向上へ</p>
-                        </div>
-                        <div class="p-fv__priceBanner u-desktop">
-                            <p class="p-fv__price">月額<strong>95,000</strong><span>円〜<small>(税抜)</small></span></p>
+                        <div class="p-fv__priceBanner">
+                            <p class="p-fv__price"><span>月額</span><strong>95,000</strong><span>円〜<small>(税抜)</small></span></p>
                         </div>
                         <p class="p-fv__comment">※ミニマムプランの場合</p>
                     </div>
@@ -108,6 +107,25 @@
                     </div>
                 </div>
                 <!-- </div> -->
+            </div>
+        </div>
+        <div class="l-buttonArea">
+            <div class="p-buttonArea">
+                <div class="p-buttonArea__inner l-inner">
+                    <div class="p-buttonArea__items">
+                        <div class="p-buttonArea__item">
+                            <div class="p-buttonArea__c-btn">
+                                <a href="#" class="c-btn c-btn--lg-blue"><span>資料請求はこちら</span></a>
+                            </div>
+                        </div>
+                        <div class="p-buttonArea__item">
+                            <p class="p-buttonArea__text">＼ 30秒で入力完了 ／</p>
+                            <div class="p-buttonArea__c-btn">
+                                <a href="#" class="c-btn c-btn--lg-orange"><span>無料相談会を予約する</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -150,10 +168,10 @@
                             <p class="p-service__text">医院毎にチームを構成し、<br class="u-mobile">全面的なサポートを。</p>
                             <div class="p-service__boxes">
                                 <div class="p-service__doctor">
-                                    <picture class="p-service__doctorImage">
-                                        <source media="(min-width: 900px)" srcset="./assets/images/common/service_left.png"/>
-                                        <img src="./assets/images/common/service_top.png" alt="開業医から担当コミュニケーターへの画像"/>
-                                    </picture>
+                                    <p class="p-service__doctorText">開業医様</p>
+                                    <div class="p-service__doctorImage">
+                                        <img src="./assets/images/common/service_left.png" alt="開業医から担当コミュニケーターへの画像"/>
+                                    </div>
                                 </div>
                                 <div class="p-service__communicator">
                                     <picture class="p-service__communicatorImage">
@@ -167,6 +185,83 @@
                 </div>
             </div>
         </section>
+
+        <section class="l-merit">
+            <div class="p-merit">
+                <div class="p-merit__inner l-inner">
+                    <div class="p-merit__title">
+                        <hgroup class="c-title">
+                            <p class="c-title__sub">merit</p>
+                            <h2 class="c-title__main"><span>レンタル事務長さん</span>の３つのメリット</h2>
+                        </hgroup>
+                    </div>
+                    <p class="p-merit__text">レンタル事務長さん導入で、<br class="u-mobile">経営と診療のみに集中できる<br class="u-mobile">環境の構築が可能</p>
+                    <div class="p-merit__cards js-merit-slider">
+                        <div class="p-merit__card">
+                            <p class="merit__number">01</p>
+                            <h3 class="p-merit__cardTitle"><span>管理業務を手放す</span>ことで<br>経営と診療に集中</h3>
+                            <div class="p-merit__image"><img src="./assets/images/common/merit1.jpg" alt=""></div>
+                            <p class="p-merit__description">人事・採用から細かな事務<br>作業集患対策など、あらゆる業務を<br>プロに相談が可能です</p>
+                        </div>
+                        <div class="p-merit__card">
+                            <p class="merit__number">02</p>
+                            <h3 class="p-merit__cardTitle"><span>雇用リスク・<br>教育コストなしで</span><br>事務長機能を持てる</h3>
+                            <div class="p-merit__image"><img src="./assets/images/common/merit2.jpg" alt=""></div>
+                            <p class="p-merit__description">雇用するより安く、教育もいらない。<br>思い立ったらすぐ<br>開始が可能です。</p>
+                        </div>
+                        <div class="p-merit__card">
+                            <p class="merit__number">03</p>
+                            <h3 class="p-merit__cardTitle"><span>集患や人事・採用業務</span>も<br>数多くご相談頂いております</h3>
+                            <div class="p-merit__image"><img src="./assets/images/common/merit3.jpg" alt=""></div>
+                            <p class="p-merit__description">元サイバーエージェントメンバーによる<br>集患施策や、大手上場企業出身の<br>人事が貴院を支援</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="l-topAbout">
+            <div class="p-topAbout">
+                <div class="p-topAbout__inner l-inner">
+                    <div class="p-topAbout__icon">
+                        <img src="#" alt="アイコン">
+                    </div>
+                    <h2 class="p-topAbout__title">生活の中のこんなところでも<br class="u-mobile">活躍しています</h2>
+                    <div class="p-topAbout__lists js-about-slider">
+                        <div class="p-topAbout__list">
+                            <div class="p-topAbout__text">
+                                <h3 class="p-topAbout__listTitle">衣類</h3>
+                                <p class="p-topAbout__listText"> 様々な衣類向けで快適性を付与します。抗菌・冷感・撥水撥油・防汚・ストレッチバック性など。 </p>
+                            </div>
+                            <picture class="p-topAbout__img">
+                                <source srcset="./assets/images/top/about_01.webp" type="image/webp" />
+                                <img src="#" alt="衣類">
+                            </picture>
+                        </div>
+                        <div class="p-topAbout__list">
+                            <div class="p-topAbout__text">
+                                <h3 class="p-topAbout__listTitle">寝装・リビング関連</h3>
+                                <p class="p-topAbout__listText"> 睡眠の質向上や住空間の快適性向上に向け、生地加工で健康づくりに貢献します。 </p>
+                            </div>
+                            <picture class="p-topAbout__img">
+                                <source srcset="./assets/images/top/about_02.webp" type="image/webp" />
+                                <img src="#" alt="寝装・リビング関連">
+                            </picture>
+                        </div>
+                        <div class="p-topAbout__list">
+                            <div class="p-topAbout__text">
+                                <h3 class="p-topAbout__listTitle">空調</h3>
+                                <p class="p-topAbout__listText"> 日本人の4人に1人はアレルギー症状を持っていると言われており、空調の衛生維持は重要です。フィルターを介して快適を演出します。 </p>
+                            </div>
+                            <picture class="p-topAbout__img">
+                                <source srcset="./assets/images/top/about_03.webp" type="image/webp" />
+                                <img src="#" alt="空調">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
 
     </main>
 

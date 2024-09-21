@@ -4,8 +4,7 @@
     width: 100%;
     height: 100vh;
     background: url(../images/common/fv.jpg) center right / cover no-repeat;
-    // position: relative;
-    
+
     @include mq(md) {
         height: auto;
         background: url(../images/common/fv.jpg) center center / cover no-repeat;
@@ -17,6 +16,8 @@
     padding-top: rem(92);
     display: flex;
     flex-direction: column;
+    max-width: rem(366);
+
     @include mq(md) {
         padding-top: rem(134);
         flex-direction: row;
@@ -25,12 +26,14 @@
 }
 
 .p-fv__texts {
+
     @include mq(md) {
         width: 43%;
     }
 }
 
 .p-fv__image {
+
     @include mq(md) {
         width: 53%;
     }
@@ -39,84 +42,93 @@
 // ========================================
 // spの丸テキスト
 // ========================================
-.p-fv__textBox {
-    margin-top: rem(30);
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
+// .p-fv__textBox {
+//     margin-top: rem(30);
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-evenly;
+// }
 
-.p-fv__text {
-    width: rem(100);
-    height: rem(100);
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 50%;
-    font-size: rem(12);
-    background-color: $color4;
-    color: $accent-color2;
-}
+// .p-fv__text {
+//     width: rem(100);
+//     height: rem(100);
+//     display: inline-flex;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+//     border-radius: 50%;
+//     font-size: rem(12);
+//     background-color: $color4;
+//     color: $accent-color2;
+// }
 
 // ========================================
 // バナー
 // ========================================
 .p-fv__priceBanner {
+    margin-top: rem(17);
+    margin-left: calc(50% - 50vw);
+    padding-left: calc(50vw - 50%);
+    background-color: $accent-color1;
+    clip-path: polygon(0 0, 92% 0, 100% 101%, 106% 100%, 0 100%);
     @include mq(md) {
         margin-top: rem(20);
         margin-left: calc(50% - 50vw);
         padding-left: calc(50vw - 50%);
         background-color: $accent-color1;
-        clip-path: polygon(0 0, 90% 0, 100% 101%, 106% 100%, 0 100%);
+        clip-path: polygon(0 0, 92% 0, 100% 101%, 106% 100%, 0 100%);
     }
 }
 
-.p-fv__priceBanner span {
+.p-fv__price {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: rem(52);
+    font-weight: $bold;
+    color: $white;
+    @include mq(md) {
+        padding-right: rem(70);
+    }
+}
+
+.p-fv__price span {
     display: inline-flex;
     flex-direction: column-reverse;
-    font-size: rem(12);
 }
 
-// spanとsmallの位置調整する
-// margin-bottomかpaddingで調整
-// 最終手段：transform translateY(-0px)で調整
-
-.p-fv__priceTexts {
-    // position: absolute;
-    // top: 0;
- 
-       // left: 0;
-    // position: relative;
-}
-
-.p-fv__price {
+.p-fv__price small {
+    font-size: rem(14);
     @include mq(md) {
-        font-size: rem(34);
-        font-weight: $bold;
-        // line-height: 1.6;
-        color: $white;
+        font-size: rem(18);
+    }
+}
+
+.p-fv__price span {
+    font-size: rem(25);
+    display: flex;
+    align-items: center;
+    @include mq(md) {
+        font-size: rem(29);
         display: flex;
-        align-items: baseline;
+        align-items: center;
     }
 }
 
 .p-fv__price strong {
+    font-size: rem(51);
     @include mq(md) {
-        font-size: rem(69);
-    }
-}
-
-.p-fv__tax {
-    @include mq(md) {
-        font-size: rem(18);
-        font-weight: $bold;
-        line-height: 1;
-        color: $white;
+        font-size: rem(64);
     }
 }
 
 .p-fv__comment {
+    margin-top: rem(11);
+    font-size: rem(12);
+    text-align: right;
+    @include mq(md) {
+        margin-top: rem(13);
+        font-size: rem(14);
+    }
 }
 
 // ========================================
