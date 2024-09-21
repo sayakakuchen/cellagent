@@ -1,0 +1,113 @@
+@use "global" as *;
+// ========================================
+// content
+// ========================================
+.p-service__wrap {
+    margin-top: rem(74);
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+    background-color: #ebf7ff;
+    padding: rem(30) rem(5);
+    @include mq(md) {
+        width: 100%;
+        margin: 0;
+        margin-top: rem(74);
+        border-radius: 20px;
+    }
+}
+.p-service__content {
+    max-width: rem(500);
+    padding-right: $padding-sp;
+    padding-left: $padding-sp;
+    margin: 0 auto;
+    @include mq(md) {
+        max-width: 100%;
+        padding-right: $padding-pc;
+        padding-left: $padding-pc;
+        margin: 0 auto;
+    }
+}
+
+.p-service__text {
+    margin-top: rem(23);
+    font-weight: $bold;
+    font-size: rem(16);
+    letter-spacing: 0.06em;
+    line-height: calc(20/16);
+    text-align: center;
+    color: $color2;
+    @include mq(md) {
+        margin-top: rem(72);
+        font-size: rem(23);
+        letter-spacing: 0.1em;
+        line-height: calc(24/23);
+    }
+}
+
+/// ========================================
+// 開業医とコミュニケーター
+// ========================================
+
+.p-service__boxes {
+    margin-top: rem(28);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: rem(14);
+
+    @include mq(md) {
+        margin-top: rem(42);
+        flex-direction: row;
+        align-items: center;
+        gap: rem(72);
+    }
+}
+
+.p-service__doctor {
+    width: 58%;
+    position: relative;
+    z-index: 1000;
+    @include mq(md) {
+        width: 30%;
+    }
+}
+
+.p-service__doctor::after {
+    background-color: $color4;
+    content: "";
+    background: url(../images/common/arrow2.svg) center center / contain no-repeat;
+    position: absolute;
+    width: rem(15);
+    height: rem(82);
+    bottom: rem(-40);
+    left: 40%;
+    z-index: -2;
+    @include mq(md) {
+        background: url(../images/common/arrow3.png) center center / contain no-repeat;
+        width: rem(195);
+        height: rem(98);
+        left: calc(50% + 81px);
+        top: 33%;
+    }
+}
+
+.p-service__doctorImage {
+
+}
+
+.p-service__communicator {
+    padding: rem(19);
+    border-radius: 20px;
+    background: pink;
+    z-index: 1000;
+    @include mq(md) {
+        width: 60%;
+        padding: rem(30) rem(33);
+        z-index: 500;
+    }
+}
+
+.p-service__communicatorImage {
+    
+}
