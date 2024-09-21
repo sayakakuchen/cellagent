@@ -1,25 +1,22 @@
 @use "global" as *;
 
-.p-mv {
+.p-fv {
     width: 100%;
     height: 100vh;
-    background: url(../images/common/mv.jpg) center right / cover no-repeat;
+    background: url(../images/common/fv.jpg) center right / cover no-repeat;
     // position: relative;
     
     @include mq(md) {
         height: auto;
-        background: url(../images/common/mv.jpg) center center / cover no-repeat;
+        background: url(../images/common/fv.jpg) center center / cover no-repeat;
     }
 }
 
-.p-mv__inner {
-    // width: 100%;
+.p-fv__inner {
     height: inherit;
     padding-top: rem(92);
     display: flex;
     flex-direction: column;
-    // gap: rem(20);
-    overflow: hidden;
     @include mq(md) {
         padding-top: rem(134);
         flex-direction: row;
@@ -27,13 +24,13 @@
     }
 }
 
-.p-mv__texts {
+.p-fv__texts {
     @include mq(md) {
         width: 43%;
     }
 }
 
-.p-mv__image {
+.p-fv__image {
     @include mq(md) {
         width: 53%;
     }
@@ -42,14 +39,14 @@
 // ========================================
 // spの丸テキスト
 // ========================================
-.p-mv__textBox {
+.p-fv__textBox {
     margin-top: rem(30);
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 
-.p-mv__text {
+.p-fv__text {
     width: rem(100);
     height: rem(100);
     display: inline-flex;
@@ -65,7 +62,7 @@
 // ========================================
 // バナー
 // ========================================
-.p-mv__priceBanner {
+.p-fv__priceBanner {
     @include mq(md) {
         margin-top: rem(20);
         margin-left: calc(50% - 50vw);
@@ -75,54 +72,58 @@
     }
 }
 
-.p-mv__priceTexts {
+.p-fv__priceBanner span {
+    display: inline-flex;
+    flex-direction: column-reverse;
+    font-size: rem(12);
+}
+
+// spanとsmallの位置調整する
+// margin-bottomかpaddingで調整
+// 最終手段：transform translateY(-0px)で調整
+
+.p-fv__priceTexts {
     // position: absolute;
     // top: 0;
-    // left: 0;
+ 
+       // left: 0;
     // position: relative;
 }
 
-.p-mv__price {
+.p-fv__price {
     @include mq(md) {
         font-size: rem(34);
         font-weight: $bold;
-        line-height: 1.6;
+        // line-height: 1.6;
         color: $white;
-        // position: absolute;
-        // top: 0;
-        // right: 0;
+        display: flex;
+        align-items: baseline;
     }
 }
 
-.p-mv__price span {
+.p-fv__price strong {
     @include mq(md) {
         font-size: rem(69);
     }
 }
 
-.p-mv__tax {
+.p-fv__tax {
     @include mq(md) {
         font-size: rem(18);
         font-weight: $bold;
         line-height: 1;
         color: $white;
-        // position: absolute;
-        // top: 1px;
-        // right: rem(-20);
     }
 }
 
-.p-mv__comment {
-    // position: absolute;
-    // bottom: rem(-25);
-    // right: 0;
+.p-fv__comment {
 }
 
 // ========================================
 // ボタン
 // ========================================
 
-.p-mv__btn {
+.p-fv__btn {
     width: 100vw;
     margin: 0 calc(50% - 50vw);
     display: flex;

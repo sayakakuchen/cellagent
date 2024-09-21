@@ -1,0 +1,130 @@
+@use "global" as *;
+
+.p-problem {
+    padding-top: rem(48);
+    position: relative;
+    @include mq(md) {
+        padding-top: rem(59);
+    }
+}
+
+.p-problem::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-image: url('../images/common/problem_bgLeft-sp.png'), url('../images/common/problem_bgRight-sp.png');
+    background-size: cover;
+    background-position: center center, center center;
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    max-height: rem(300);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @include mq(md) {
+        background-image: url('../images/common/problem_bgLeft.png'), url('../images/common/problem_bgRight.png');
+    }
+}
+
+.p-problem::after {
+    content: "";
+    background: url(../images/common/arrow.svg) center center / contain no-repeat;
+    position: absolute;
+    width: rem(82);
+    height: rem(24);
+    bottom: rem(-64);
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq(md) {
+        width: rem(156);
+        height: rem(46);
+        bottom: rem(-135);
+    }
+}
+
+
+.p-problem__inner {
+
+}
+
+.p-problem__title {
+
+}
+
+.p-problem__texts {
+    margin-top: rem(30);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background: $white;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    padding: rem(30);
+    position: relative;
+    @include mq(sm) {
+        padding: rem(30) rem(80);
+    }
+    @include mq(md) {
+        flex-direction: row;
+        gap: rem(52);
+    }
+}
+
+.p-problem__texts::after {
+    content: "";
+    background: url(../images/common/problem_illust.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: rem(106);
+    height: rem(138);
+    bottom: rem(-9);
+    right: calc(50% - max(24.4vw, 10.875rem));
+    @include mq(md) {
+        width: rem(166);
+        height: rem(218);
+        bottom: rem(-24);
+        right: calc(50% - min(49.4vw, 32.875rem));
+    }
+}
+
+
+.p-problem__textBox1 {
+    @include mq(md) {
+        width: 35%;
+    }
+}
+
+.p-problem__textBox2 {
+    @include mq(md) {
+        width: 49%;
+    }
+}
+
+.p-problem__text {
+    font-weight: $bold;
+    font-size: rem(14);
+    letter-spacing: 0.06em;
+    line-height: calc(29/14);
+    text-align: left;
+    position: relative;
+    padding-left: rem(26);
+    @include mq(md) {
+        font-size: rem(22);
+        line-height: calc(45/22);
+    }
+}
+
+.p-problem__text::before {
+    position: absolute;
+    background-color: $color2;
+    content: "";
+    display: inline-block;
+    mask-image: url(../images/common/check-icon.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    width: rem(18);
+    height: rem(16);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}

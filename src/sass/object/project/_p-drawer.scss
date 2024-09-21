@@ -5,11 +5,12 @@
 .p-drawer {
     position: fixed;
     width: 100%;
-    height: calc(100vh - rem(44));
-    top: rem(52);
+    height: 100vh;
+    top: 0;
     left: 0;
     overflow-y: scroll;
-    background-color: $gray;
+    background: $white;
+    padding-top: rem(50);
     padding-bottom: rem(90);
     display: none;
 }
