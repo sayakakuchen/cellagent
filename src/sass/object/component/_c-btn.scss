@@ -104,40 +104,14 @@
     height: rem(20);
 }
 
-// // sp.pc
-
-// .c-btn--lg-blue {
-//     padding: rem(20) rem(74);
-//     letter-spacing: 0.08em;
-//     border-radius: 50px;
-//     margin: 0 rem(4) rem(4) 0;
-//     background-color: $white;
-//     color: $color2;
-//     box-shadow: rem(0) rem(4) rem(4) rem(0) #0033bc;
-// }
-// .c-btn--lg-orange {
-//     padding: rem(20) rem(74);
-//     border-radius: 50px;
-//     margin: 0 rem(4) rem(4) 0;
-//     background-color: $accent-color1;
-//     box-shadow: rem(0) rem(4) rem(4) rem(0) #B13906;
-// }
-
-// // pc
-// .c-btn--sm-blue {
-
-// }
-
-// .c-btn--sm-orange {
-//     padding: rem(13) rem(30);
-//     max-width: rem(200);
-//     margin: 0;
-//     font-size: rem(13);
-//     letter-spacing: 0.06em;
-//     line-height: calc(20/20);
-//     text-align: center;
-//     background-color: $accent-color1;
-//     color: $white;
-//     box-shadow: none;
-//     border-radius: 20px;
-// }
+.c-btn--cta {
+    @include mq(md) {
+        width: rem(405);
+        height: rem(69);
+        
+    }
+    @include mq(lg) {
+        width: rem(476);
+        height: rem(81);
+    }
+}

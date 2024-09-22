@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.p-faq {
+
+}
+
+.p-faq__item nav {
+    // display: none;
+}
+
+.p-faq__title {
+    position: relative;
+}
+
+.p-faq__title::before,
+.p-faq__title::after {    // 縦
+    content: '';
+    display: inline-block;
+    width: rem(24);
+    height: rem(1);
+    background-color: $gray;
+    position: absolute;
+    right: rem(16);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity .3s;
+    @include mq(md) {
+        right: rem(45);
+    }
+}
+
+.p-faq__title::before{/* 開いている時 */
+    opacity: 0;
+}
+
+.p-faq__title::after{/* 開いている時 */
+    transform: translateY(-50%) rotate(180deg);
+    transition: transform 0.3s;
+}
+
+.p-faq__title.is-active::before{/* 開いている時 */
+    opacity: 1;
+}
+
+
+.p-faq__title.is-active::after {     // 横
+    transform: translateY(-50%) rotate(90deg);
+    transition: transform .3s;
+}

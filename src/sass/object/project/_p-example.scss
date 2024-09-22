@@ -1,0 +1,106 @@
+@use "global" as *;
+
+.p-example {
+
+}
+
+.p-example__inner.l-inner {
+    max-width: rem(550);
+    @include mq(md) {
+        max-width: 1200px + strip-unit($padding-pc) * 2;
+    }
+}
+
+.p-example__title {
+    text-align: center;
+}
+
+.p-example__text {
+    margin-top: rem(40);
+    display: inline-block;
+    font-weight: $bold;
+    font-size: rem(15);
+    line-height: calc(21/18);
+    letter-spacing: 0.06em;
+    color: $color4;
+    padding-bottom: rem(20);
+    border-bottom: 3px dotted $gray;
+    margin-top: rem(60);
+    @include mq(sm) {
+        font-size: rem(18);
+    }
+    @include mq(md) {
+        font-size: rem(30);
+        line-height: calc(31/30);
+        padding-bottom: rem(16);
+    }
+}
+
+.p-example__items {
+    margin-top: rem(30);
+    display: flex;
+    flex-direction: column;
+    gap: rem(30);
+    @include mq(md) {
+        margin-top: rem(60);
+        flex-direction: row;
+        gap: rem(40);
+        justify-content: space-between;
+    }
+}
+
+.p-example__item {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    @include mq(md) {
+        gap: rem(24);
+        padding: rem(15);
+        padding-bottom: rem(25);
+        border: 3px solid #899ad0;
+        border-radius: 20px;
+    }
+}
+
+.p-example__itemTitle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 35px;
+    padding: rem(10) rem(5);
+    background-color: #1A45CB;
+    // font-family: "Hiragino Sans";
+    font-weight: $bold;
+    font-size: rem(20);
+    letter-spacing: 0.06em;
+    line-height: calc(25/20);
+    text-align: center;
+    color: $white;
+    @include mq(md) {
+        padding: rem(10) rem(20);
+        border-radius: 30px;
+        font-size: rem(17);
+        letter-spacing: 0.06em;
+        line-height: calc(42/21);
+    }
+    @include mq(xl) {
+        font-size: rem(21);
+    }
+}
+
+.p-example__itemTitle--darkBlue {
+    background-color: $color4;
+}
+
+.p-example__image {
+    aspect-ratio: 355 / 228;
+    @include mq(md) {
+        aspect-ratio: 550 / 343.07;
+    }
+}
+
+.p-example__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
