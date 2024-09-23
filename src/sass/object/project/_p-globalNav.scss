@@ -11,8 +11,11 @@
     margin: 0 auto;
     @include mq(md) {
         display: flex;
-        gap: clamp(rem(10), 2.5vw, rem(80));
+        gap: 0;
         height: inherit;
+    }
+    @include mq(xl) {
+        gap: rem(40);
     }
 }
 
@@ -44,5 +47,40 @@
 .p-globalNav__link--footer {
     @include mq(md) {
         font-size: rem(16);
+    }
+}
+
+.p-globalNav__link--footer:nth-of-type(1) {
+    order: 1;
+    @include mq(md) {
+        order: unset;
+    }
+}
+
+.p-globalNav__link--footer:nth-of-type(2) {
+    order: 3;
+    @include mq(md) {
+        order: unset;
+    }
+}
+
+.p-globalNav__link--footer:nth-of-type(3) {
+    order: 5;
+    @include mq(md) {
+        order: unset;
+    }
+}
+
+.p-globalNav__link--footer:nth-of-type(4) {
+    order: 2;
+    @include mq(md) {
+        order: unset;
+    }
+}
+
+.p-globalNav__link--footer:nth-of-type(5) {
+    order: 4;
+    @include mq(md) {
+        order: unset;
     }
 }

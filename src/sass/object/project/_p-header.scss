@@ -32,6 +32,8 @@
     margin-right: auto;
     z-index: 1;
     @include mq(md) {
+        max-width: unset;
+        width: rem(206);
         margin-right: 0;
     }
 }

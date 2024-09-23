@@ -1,16 +1,6 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-    var header = $('.p-header').outerHeight();
-    var urlHash = location.hash;
-    if(urlHash) {
-        $('body,html').stop().scrollTop(0);
-        setTimeout(function(){
-            var target = $(urlHash);
-            var position = target.offset().top - header;
-            $('body,html').stop().animate({scrollTop:position}, 500);
-        }, 100);
-    }
     $('.js-drawer-button').click(function(){
         $(this).toggleClass('is-active');
         $(this).next().slideToggle();
@@ -39,5 +29,27 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         $(this).toggleClass("is-active");
         $(this).next("nav").slideToggle();
     });
+
+    if (window.matchMedia('(max-width:899px)').matches) {
+        $('.js-merit-slider').slick({
+            slidesToShow:1,
+            dots:true,
+            dotsClass: 'slider-dots',
+            arrows:false,
+            infinite: false,
+        });
+    }
+
+    if (window.matchMedia('(max-width:899px)').matches) {
+        $('.js-introduction-slider').slick({
+            slidesToShow:1,
+            dots:true,
+            dotsClass: 'slider-dots',
+            arrows:true,
+            infinite: false,
+            prevArrow: '<div class="slide-arrow prev-arrow"></div>',
+            nextArrow: '<div class="slide-arrow next-arrow"></div>',
+        });
+    }
 
 });

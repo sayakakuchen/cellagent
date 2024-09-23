@@ -36,11 +36,11 @@
 }
 
 .p-buttonArea__text {
+    padding-bottom: rem(10);
     font-weight: $bold;
     font-size: rem(15);
     letter-spacing: 0.06em;
     line-height: calc(20/15);
-    text-align: center;
     color: $white;
-    padding-bottom: rem(10);
+    text-align: center;
 }
