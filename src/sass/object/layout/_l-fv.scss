@@ -1,9 +1,5 @@
 @use "global" as *;
 
 .l-fv {
-    // margin-top: rem(52);
-    
-    @include mq(md) {
-        // margin-top: rem(60);
-    }
+
 }

@@ -10,7 +10,9 @@
 }
 
 .p-merit__inner.l-inner {
-    max-width: rem(1200);
+    @include mq(md) {
+        max-width: rem(1200);
+    }
 }
 
 .p-merit__title {
@@ -33,12 +35,13 @@
 
 .p-merit__cards {
     margin-top: rem(75);
-    padding-inline: rem(25);
-    max-width: rem(300);
+    // padding-inline: rem(25);
+    // max-width: rem(300);
+    width: 88%;
     margin-inline: auto;
     @include mq(md) {
-        padding-inline: 0;
-        max-width: unset;
+        // padding-inline: 0;
+        // max-width: unset;
         margin-inline: 0;
         margin-top: rem(92);
         display: grid;
@@ -130,7 +133,6 @@
     font-size: rem(13);
     line-height: calc(20/13);
     text-align: center;
-    color: #000;
     @include mq(md) {
         font-size: rem(18);
         line-height: calc(26/18);
@@ -142,9 +144,32 @@
 // ========================================
 
 .p-merit__cards .slick-list {
-    overflow: unset;
+    padding-top: rem(35);
 }
 
-.slick-initialized .slick-slide {
-    margin-right: rem(365);
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 10px;
 }
+
+.slider-dots li {
+    list-style: none;
+    width: 32px;
+    height: 8px;
+    background-color: #999999;
+    margin: 0 5px;
+}
+
+.slider-dots li.slick-active {
+    background-color: red;
+}
+
+.slider-dots button {
+    display: none;
+}
+
+// ========================================
+// 
+// ========================================

@@ -4,46 +4,134 @@
 
 }
 
-.p-faq__item nav {
-    // display: none;
+.p-faq__content {
+    margin-top: rem(21);
+    @include mq(md) {
+        margin-top: rem(70);
+    }
 }
 
-.p-faq__title {
+.p-faq__item {
+    padding: rem(12) rem(10) rem(30);
+    background-color: $white;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    @include mq(md) {
+        padding: rem(33) rem(20) rem(62);
+    }
+}
+
+.p-faq__item + .p-faq__item {
+    margin-top: rem(20);
+}
+
+.p-faq__itemTitle {
     position: relative;
 }
 
-.p-faq__title::before,
-.p-faq__title::after {    // 縦
+.p-faq__itemTitle::before,
+.p-faq__itemTitle::after {    // 縦
     content: '';
     display: inline-block;
-    width: rem(24);
-    height: rem(1);
+    width: rem(20);
+    height: rem(2);
     background-color: $gray;
     position: absolute;
-    right: rem(16);
+    right: rem(-24);
     top: 50%;
     transform: translateY(-50%);
     transition: opacity .3s;
     @include mq(md) {
-        right: rem(45);
+        width: rem(30);
+        right: rem(-70);
     }
 }
 
-.p-faq__title::before{/* 開いている時 */
+.p-faq__itemTitle::before{/* 開いている時 */
+    opacity: 1;
+}
+
+.p-faq__itemTitle::after{/* 開いている時 */
+    transform: translateY(-50%) rotate(90deg);
+    transition: transform .3s;
+}
+
+.p-faq__itemTitle.is-active::before{/* 開いている時 */
     opacity: 0;
 }
 
-.p-faq__title::after{/* 開いている時 */
+
+.p-faq__itemTitle.is-active::after {     // 横
     transform: translateY(-50%) rotate(180deg);
     transition: transform 0.3s;
 }
 
-.p-faq__title.is-active::before{/* 開いている時 */
-    opacity: 1;
+.p-faq__itemTitle span,
+.p-faq__text span {
+    position: relative;
+    padding-left: rem(44);
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    @include mq(md) {
+        padding-left: rem(80);
+    }
 }
 
+.p-faq__itemTitle span::before,
+.p-faq__text span::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: rem(34);
+    height: rem(34);
+    top: 0;
+    left: 0;
+    @include mq(md) {
+        width: rem(50);
+        height: rem(50);
+    }
+}
 
-.p-faq__title.is-active::after {     // 横
-    transform: translateY(-50%) rotate(90deg);
-    transition: transform .3s;
+.p-faq__itemTitle span::before {
+    background: url('../images/common/faq_q.png') center center / contain no-repeat;
+}
+
+.p-faq__text span::before {
+    background: url('../images/common/faq_a.png') center center / contain no-repeat;
+}
+
+.p-faq__itemTitle,
+.p-faq__text {
+    width: 90%;
+    font-weight: $normal;
+    font-size: rem(13);
+    line-height: 1;
+    text-align: left;
+    @include mq(md) {
+        font-size: rem(20);
+    }
+}
+
+.p-faq__text {
+    margin-top: rem(33);
+    @include mq(md) {
+        margin-top: rem(50);
+    }
+}
+
+.p-faq__text em {
+    font-style: normal;
+    color: $accent-color1;
+}
+
+.p-faq__item nav {
+    display: none;
+}
+
+.p-faq__itemTitle:hover {
+    cursor: pointer;
+    transition: opacity 0.3s;
+    @include mq(md) {
+        opacity: 0.8;
+    }
 }

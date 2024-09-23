@@ -108,7 +108,6 @@
     text-align: left;
     position: relative;
     padding-left: rem(26);
-    color: #000;
     @include mq(md) {
         font-size: rem(22);
         line-height: calc(45/22);

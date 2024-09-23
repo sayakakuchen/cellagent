@@ -2,7 +2,28 @@
 
 .p-introduction {
     background-color: #EBEBEB;
+    padding-top: rem(32);
+    @include mq(md) {
+        padding-top: rem(80);
+        position: relative;
+    }
 }
+
+.p-introduction::before {
+    @include mq(md) {
+        background-color: $white;
+        content: "";
+        display: inline-block;
+        mask: url(../images/common/introduction_icon.svg) center center / contain no-repeat;
+        position: absolute;
+        width: rem(213);
+        height: rem(212);
+        top: 0;
+        right: calc(50% - max(20.4vw, 32.875rem));
+        // transform: translateY(-50%);
+    }
+}
+
 
 .p-introduction__inner {
 
@@ -61,12 +82,11 @@
 }
 
 .p-introduction__cardHead p {
-    font-weight: 300;
+    font-weight: $regular;
     font-size: rem(15);
     letter-spacing: 0.06em;
     line-height: 1;
     text-align: center;
-    color: #000;
 }
 
 .p-introduction__cardContent {
@@ -112,10 +132,27 @@
 
 .p-introduction__cardProblems li,
 .p-introduction__cardSolutions li {
-    font-weight: 300;
+    font-weight: $regular;
     font-size: rem(16);
     line-height: 1;
     text-align: left;
-    color: #000;
-    
+}
+
+.slide-arrow {
+    position: absolute;
+    top: 0%;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    transform: translateY(-50%);
+    background:url();
+    z-index: 1;
+}
+
+.prev-arrow {
+    left: 0px;
+}
+
+.next-arrow {
+    right: 0px;
 }
