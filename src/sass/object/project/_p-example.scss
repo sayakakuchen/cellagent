@@ -24,8 +24,8 @@
     letter-spacing: 0.06em;
     color: $color4;
     padding-bottom: rem(20);
-    border-bottom: 3px dotted $gray;
     margin-top: rem(60);
+    position: relative;
     @include mq(sm) {
         font-size: rem(18);
     }
@@ -34,6 +34,20 @@
         line-height: calc(31/30);
         padding-bottom: rem(16);
     }
+}
+
+.p-example__text::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(circle farthest-side, $gray, $gray 30%, transparent 30%, transparent);
+    background-size: rem(10);
+    content: '';
+    display: inline-block;
+    height: rem(3);
+    width: 100%;
+    background-position: bottom left;
 }
 
 .p-example__items {
