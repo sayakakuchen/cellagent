@@ -1,0 +1,42 @@
+@use 'global' as *;
+
+.p-breadcrumb {
+
+}
+
+.p-breadcrumb ol {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2em;
+}
+
+.p-breadcrumb li {
+    position: relative;
+}
+
+.p-breadcrumb li span {
+    font-size: rem(12);
+    font-weight: 500;
+    line-height: calc(22/14);
+    letter-spacing: 0.06em;
+    color: $white;
+
+    @include mq(md) {
+        font-size: rem(14);
+    }
+}
+
+.p-breadcrumb li + li::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    content: ">";
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    left: -1.5em;
+    top: 50%;
+    transform: translateY(-50%);
+}

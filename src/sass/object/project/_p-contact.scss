@@ -1,0 +1,23 @@
+@use 'global' as *;
+
+.p-contact {
+
+}
+
+.p-contact__inner {
+
+}
+
+.p-contact__title {
+
+}
+
+.p-contact__body {
+    margin-top: rem(50);
+
+    @include mq(md) {
+        max-width: rem(750);
+        margin-inline: auto;
+        margin-top: rem(70);
+    }
+}
