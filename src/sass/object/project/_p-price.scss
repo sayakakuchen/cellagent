@@ -1,0 +1,257 @@
+@use "global" as *;
+
+.p-price {
+    position: relative;
+    padding-top: rem(40);
+    @include mq(md) {
+        padding-top: rem(95);
+    }
+}
+
+.p-price::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-image: url('../images/common/bgLeft-sp.png'), url('../images/common/bgRight-sp.png');
+    background-size: 100% 100%;
+    background-position: center center, center center;
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    max-height: rem(300);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @include mq(md) {
+        background-image: url('../images/common/bgLeft.png'), url('../images/common/bgRight.png');
+    }
+}
+
+.p-price__inner {
+
+}
+
+.p-price__title {
+
+}
+
+.p-price__text {
+    margin-top: rem(34);
+    font-weight: $bold;
+    font-size: rem(14);
+    letter-spacing: 0.06em;
+    line-height: 1;
+    text-align: center;
+    color: $color4;
+    @include mq(md) {
+        margin-top: rem(33);
+        font-size: rem(24);
+    }
+
+}
+
+// ========================================
+// テーブルの指定
+// ========================================
+.p-price__table {
+    margin-top: rem(34);
+    @include mq(md) {
+        margin-top: rem(49);
+    }
+}
+
+.p-price__table table {
+
+    @include mq(md) {
+        border-spacing: 5px;
+        // border-collapse: collapse;
+    }
+}
+
+th,
+td {
+    width: 100%;
+    display: block;
+    @include mq(md) {
+        width: unset;
+        display: table-cell;
+    }
+}
+
+td {
+    @include mq(md) {
+        border-left: 3px solid $lightGray;
+        border-top: 3px solid $lightGray;
+        border-collapse: collapse;
+    }
+}
+
+tbody tr:first-child td {
+    @include mq(md) {
+        border-top: none;
+    }
+}
+
+tbody tr td:nth-child(2) {
+    @include mq(md) {
+        border-left: none;
+    }
+}
+
+td:first-child {
+    border-top: none;
+    border-left:none;
+}
+
+.p-price__table table thead,
+.p-price__table table tbody {
+    text-align: center;
+}
+
+
+.p-price__table thead {
+
+}
+
+.p-price__table thead th {
+    width: rem(340);
+    height: rem(60);
+    font-weight: $bold;
+    font-size: rem(20);
+    letter-spacing: 0.06em;
+    line-height: 1;
+    text-align: center;
+    color: $color4;
+    background-color: $color7;
+    @include mq(md) {
+        width: rem(312);
+        height: rem(60);
+        font-size: rem(24);
+    }
+}
+
+.p-price__table thead th:nth-child(3) {
+    background-color: $color5;
+    color: $white;
+}
+
+.p-price__table thead th:nth-child(4) {
+    background-color: $color6;
+    color: $white;
+}
+
+.p-price__table tr {
+
+}
+
+.p-price__table tbody td {
+    background-color: $white;
+    font-weight: $bold;
+    font-size: rem(24);
+    letter-spacing: 0.06em;
+    line-height: 1;
+    color: $color4;
+    width: rem(340);
+    @include mq(md) {
+        width: unset;
+        font-size: rem(28);
+    }
+}
+
+.p-price__table tbody tr td p {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: rem(9.5) rem(20);
+    justify-content: center;
+    align-items: center;
+    width: rem(110);
+    height: rem(25.57);
+    background-color: $color7;
+    font-weight: $regular;
+    font-size: rem(13);
+    letter-spacing: 0.06em;
+    line-height: 1;
+    text-align: center;
+    color: #000;
+    border-radius: 20px;
+    @include mq(md) {
+        width: rem(132);
+        height: rem(30.68);
+        font-weight: 600;
+        gap: rem(12) rem(24);
+        font-size: rem(15);
+    }
+}
+
+.p-price__table tbody tr td p:nth-child(5),
+.p-price__table tbody tr td p:nth-child(6) {
+    background-color: #CBD9FC;
+}
+
+.p-price__table tbody td span {
+    font-size: rem(18);
+    font-weight: 300;
+    @include mq(md) {
+        font-size: rem(21);
+    }
+}
+
+.p-price__table tbody td small {
+    font-size: rem(13);
+    @include mq(md) {
+        font-size: rem(15);
+    }
+}
+
+.p-price__table tbody td:nth-child(3) {
+    color: $color3;
+}
+
+.p-price__table tbody td:nth-child(4) {
+    color: $color2;
+}
+
+.p-price__table th {
+
+}
+
+.p-price__table tbody th {
+    width: rem(340);
+    height: rem(30);
+    font-weight: $regular;
+    font-size: rem(15);
+    letter-spacing: 0.06em;
+    line-height: 1;
+    color: #000;
+    background-color: $lightGray;
+    @include mq(md) {
+        width: rem(231);
+        height: rem(72);
+        font-size: rem(18);
+        font-weight: 600;
+    }
+}
+
+
+// ========================================
+// テーブル下のテキスト
+// ========================================
+.p-price__tableText {
+    margin-top: rem(20);
+    @include mq(md) {
+        margin-top: rem(23);
+        margin-left: auto;
+        display: table;
+    }
+}
+
+.p-price__tableText p {
+    font-weight: $regular;
+    font-size: rem(13);
+    line-height: 1;
+    text-align: left;
+    color: #000;
+    @include mq(md) {
+        font-size: rem(15);
+    }
+}

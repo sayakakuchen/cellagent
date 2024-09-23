@@ -1,0 +1,151 @@
+@use "global" as *;
+
+.p-improvement {
+
+}
+
+.p-improvement__inner.l-inner {
+    padding-right: 0;   // 音で消すかも
+    padding-left: 0;   // 音で消すかも
+}
+
+.p-improvement__title {
+
+}
+
+.p-improvement__text {
+    margin-top: rem(30);
+    font-weight: $bold;
+    font-size: rem(20);
+    letter-spacing: 0.06em;
+    line-height: calc(26/20);
+    text-align: center;
+    color: $color4;
+    @include mq(md) {
+        margin-top: rem(78);
+        font-size: rem(24);
+        line-height: 1;
+    }
+}
+
+// 背景色inner超えて。
+.p-improvement__wrap {
+    margin-top: rem(40);
+    padding-block: rem(30);
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+    background-color: #D3F3FF;
+    @include mq(md) {
+        margin-top: rem(59);
+        padding-block: rem(77);
+    }
+}
+
+.p-improvement__wrapper {
+    width: 100%;
+    max-width: rem(500);
+    padding-right: $padding-sp;
+    padding-left: $padding-sp;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    align-items: center;
+    @include mq("md") {
+        max-width: $inner + strip-unit($padding-pc) * 2;
+        padding-right: $padding-pc;
+        padding-left: $padding-pc;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.p-improvement__head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: rem(30);
+    align-items: center;
+    @include mq(md) {
+        width: 35%;
+        gap: rem(33.3);
+    }
+}
+
+.p-improvement__logoBox {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    gap: rem(8.6);
+    @include mq(md) {
+        gap: rem(10.3);
+    }
+}
+
+.p-improvement__logo {
+    width: 78%;
+    aspect-ratio: 290 / 58;
+    @include mq(md) {
+        aspect-ratio: 349 / 70;
+    }
+}
+
+.p-improvement__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.p-improvement__logoText {
+    width: 20%;
+    font-weight: 600;
+    font-size: rem(18);
+    letter-spacing: 0.04em;
+    line-height: calc(21/18);
+    color: #154a93;
+    @include mq(md) {
+        font-size: rem(22);
+        letter-spacing: 0.04em;
+        line-height: calc(26/22);
+    }
+}
+
+.p-improvement__headText {
+    font-weight: $bold;
+    font-size: rem(18);
+    letter-spacing: 0.1em;
+    line-height: calc(29/20);
+    color: #154a93;
+    text-align: center;
+    @include mq(md) {
+        font-size: rem(21);
+        line-height: 1;
+    }
+}
+
+// 下線
+.p-improvement__headText span {
+    background: linear-gradient(transparent 70%,#FFF796 0%);
+}
+
+.p-improvement__imageBox {
+    width: 65%;
+    @include mq(md) {
+        width: 59%;
+    }
+}
+
+.p-improvement__image {
+    aspect-ratio: 216.82 / 815.38;
+    @include mq(md) {
+        aspect-ratio: 708.73 / 447.36;
+    }
+}
+
+.p-improvement__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

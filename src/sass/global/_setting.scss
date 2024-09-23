@@ -30,12 +30,17 @@ $bold: 700;
 $black: #111;
 $white: #fff;
 $gray: #707070;
+$lightGray: #E6E6E6;
 $accent-color1: #FF4D00;
 $accent-color2: #FFEB00;
 $color1: #D3F3FF;
 $color2: #1555FF;
 $color3: #164E9D;
 $color4: #171C61;
+$color5: #5D89FF;
+$color6: #2355FF;
+$color7: #C5E7F6;
+
 
 // ========================================
 // ブレイクポイントの指定
@@ -148,8 +153,14 @@ a {
     }
 }
 
-.p-header__btn {
-    margin-top: rem(100);
-}
+// .p-header__btn {
+//     margin-top: rem(100);
+// }
+
+// * {
+
+//     outline: 1px blue solid;
+
+//     }
 
 //////////////////////////////////////////////////////////

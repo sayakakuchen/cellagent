@@ -34,24 +34,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         }
     });
 
-// slick
-//     if (window.matchMedia('(max-width:899px)').matches) {
-//         $('.js-merit-slider').slick({
-//             slidesToShow: 1,
-//             arrows: false,
-//             dots: true,
-//             variableWidth: true,
-//             infinite: false,
-//             centerMode: true,
-//         });
-//     }   else {
-//         $('.slide.slick-initialized').slick('unslick');
-//         }
-//     }
-// sliderSetting();
-// $(window).resize(function(){
-//     sliderSetting();
-// });
-
+    // FAQのドロワー
+    $(".js-nav-open").click(function () {
+        $(this).toggleClass("is-active");
+        $(this).next("nav").slideToggle();
+    });
 
 });

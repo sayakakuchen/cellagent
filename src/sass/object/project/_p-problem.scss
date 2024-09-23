@@ -12,7 +12,7 @@
     content: "";
     display: inline-block;
     position: absolute;
-    background-image: url('../images/common/problem_bgLeft-sp.png'), url('../images/common/problem_bgRight-sp.png');
+    background-image: url('../images/common/bgLeft-sp.png'), url('../images/common/bgRight-sp.png');
     background-size: 100% 100%;
     background-position: center center, center center;
     background-blend-mode: multiply;
@@ -23,7 +23,7 @@
     left: 0;
     z-index: -1;
     @include mq(md) {
-        background-image: url('../images/common/problem_bgLeft.png'), url('../images/common/problem_bgRight.png');
+        background-image: url('../images/common/bgLeft.png'), url('../images/common/bgRight.png');
     }
 }
 
