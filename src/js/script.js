@@ -40,16 +40,47 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         });
     }
 
-    if (window.matchMedia('(max-width:899px)').matches) {
-        $('.js-introduction-slider').slick({
-            slidesToShow:1,
-            dots:true,
-            dotsClass: 'slider-dots',
-            arrows:true,
-            infinite: false,
-            prevArrow: '<div class="slide-arrow prev-arrow"></div>',
-            nextArrow: '<div class="slide-arrow next-arrow"></div>',
+    // if (window.matchMedia('(max-width:899px)').matches) {
+    //     $('.js-introduction-slider').slick({
+    //         slidesToShow:1,
+    //         dots:false,
+    //         // dotsClass: 'slider-dots',
+    //         arrows:true,
+    //         infinite: false,
+    //         prevArrow: '<div class="slide-arrow prev-arrow"></div>',
+    //         nextArrow: '<div class="slide-arrow next-arrow"></div>',
+    //     });
+    // }
+
+    // if (window.matchMedia('(mix-width:900px)').matches) {
+    //     $('.js-introduction-slider').slick({
+    //         slidesToShow:2.8,
+    //         dots:false,
+    //         // dotsClass: 'slider-dots',
+    //         arrows:true,
+    //         infinite: false,
+    //         prevArrow: '<div class="slide-arrow prev-arrow"></div>',
+    //         nextArrow: '<div class="slide-arrow next-arrow"></div>',
+    //     });
+    // }
+
+    $(".js-introduction-slider").slick({
+        slidesToShow:2.8,
+        spaceBetween: 24,
+        dots:false,
+        // dotsClass: 'slider-dots',
+        arrows:true,
+        infinite: false,
+        prevArrow: '<div class="slide-arrow prev-arrow"></div>',
+        nextArrow: '<div class="slide-arrow next-arrow"></div>',
+        responsive: [
+            {
+            breakpoint: 900, // 399px以下のサイズに適用
+            settings: {
+                slidesToShow:1,
+            },
+            },
+        ],
         });
-    }
 
 });

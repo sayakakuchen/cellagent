@@ -35,8 +35,11 @@
 
 .p-introduction__cards {
     margin-top: rem(30);
+    position: relative;
+    padding-bottom: rem(110);
     @include mq(md) {
         margin-top: rem(60);
+        padding-bottom: rem(125);
     }
 }
 
@@ -140,19 +143,28 @@
 
 .slide-arrow {
     position: absolute;
-    top: 0%;
-    width: 30px;
-    height: 30px;
-    font-size: 30px;
+    width: rem(40);
+    height: rem(40);
     transform: translateY(-50%);
-    background:url();
+    background:url('../images/common/arrow4.png') center center / contain no-repeat;
     z-index: 1;
 }
 
 .prev-arrow {
-    left: 0px;
+    bottom: rem(15);
+    left: calc(50% - 65px);
 }
 
 .next-arrow {
-    right: 0px;
+    bottom: rem(35);
+    right: calc(50% - 65px);
+    transform: rotate(180deg);
+}
+
+.slide-arrow:hover {
+    cursor: pointer;
+    transition: opacity 0.3s;
+    @include mq(md) {
+        opacity: 0.8;
+    }
 }
