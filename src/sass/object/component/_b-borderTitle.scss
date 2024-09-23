@@ -1,0 +1,32 @@
+@use 'global' as *;
+
+.c-borderTitle {
+    text-align: center;
+    font-size: rem(24);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #171C61;
+    padding-bottom: rem(10);
+    position: relative;
+
+    @include mq(md) {
+        max-width: rem(1000);
+        font-size: rem(30);
+        margin-inline: auto;
+        padding-bottom: rem(14);
+    }
+}
+
+.c-borderTitle::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(circle farthest-side, #707070, #707070 30%, transparent 30%, transparent);
+    background-size: rem(10);
+    content: '';
+    display: inline-block;
+    height: rem(3);
+    width: 100%;
+    background-position: bottom left;
+}

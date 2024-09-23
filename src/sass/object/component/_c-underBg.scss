@@ -1,0 +1,24 @@
+@use 'global' as *;
+
+.c-underBg {
+    position: relative;
+}
+
+.c-underBg::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-image: url('../images/common/bgLeft-sp.png'), url('../images/common/bgRight-sp.png');
+    background-size: 100% 100%;
+    background-position: center center, center center;
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    max-height: rem(312);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @include mq(md) {
+        background-image: url('../images/common/bgLeft.png'), url('../images/common/bgRight.png');
+    }
+}
