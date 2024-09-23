@@ -64,6 +64,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     //     });
     // }
 
+    // introduction
     $(".js-introduction-slider").slick({
         slidesToShow:2.5,
         dots:false,
