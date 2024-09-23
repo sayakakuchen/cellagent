@@ -65,17 +65,15 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     // }
 
     $(".js-introduction-slider").slick({
-        slidesToShow:2.8,
-        spaceBetween: 24,
+        slidesToShow:2.5,
         dots:false,
-        // dotsClass: 'slider-dots',
         arrows:true,
-        infinite: false,
+        infinite: true,
         prevArrow: '<div class="slide-arrow prev-arrow"></div>',
         nextArrow: '<div class="slide-arrow next-arrow"></div>',
         responsive: [
             {
-            breakpoint: 900, // 399px以下のサイズに適用
+            breakpoint: 900,
             settings: {
                 slidesToShow:1,
             },
