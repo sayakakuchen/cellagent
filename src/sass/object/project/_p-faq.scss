@@ -12,11 +12,11 @@
 }
 
 .p-faq__item {
-    padding: rem(12) rem(10) rem(30);
+    padding: rem(12) rem(10) rem(12);
     background-color: $white;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     @include mq(md) {
-        padding: rem(33) rem(20) rem(62);
+        padding: rem(20);
     }
 }
 
@@ -66,7 +66,7 @@
 }
 
 .p-faq__itemTitle span,
-.p-faq__text span {
+.p-faq__text {
     position: relative;
     padding-left: rem(44);
     min-height: 34px;
@@ -74,11 +74,12 @@
     align-items: center;
     @include mq(md) {
         padding-left: rem(80);
+        min-height: 50px;
     }
 }
 
 .p-faq__itemTitle span::before,
-.p-faq__text span::before {
+.p-faq__text::before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -96,7 +97,7 @@
     background: url('../images/common/faq_q.png') center center / contain no-repeat;
 }
 
-.p-faq__text span::before {
+.p-faq__text::before {
     background: url('../images/common/faq_a.png') center center / contain no-repeat;
 }
 
@@ -115,7 +116,7 @@
 .p-faq__text {
     margin-top: rem(33);
     @include mq(md) {
-        margin-top: rem(50);
+        margin-top: rem(20);
     }
 }
 
