@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-footer {
-
+    overflow: hidden;
 }
 
 .p-footer__inner {
@@ -44,7 +44,7 @@
 }
 
 .p-footer__bottom {
-    padding-block: rem(20) rem(15);
+    padding-block: rem(20) rem(60);
 
     @include mq(md) {
         padding-block: rem(30) rem(45);

@@ -33,6 +33,17 @@
 
 .p-whatWeDo__title {
 
+    h2 {
+        @include mq(md) {
+            font-size: rem( 34);
+        }
+    }
+
+    h2 span {
+        @include mq(md) {
+            font-size: rem(38);
+        }
+    }
 }
 
 .p-whatWeDo__items {

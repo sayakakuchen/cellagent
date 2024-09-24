@@ -3,6 +3,7 @@
 .p-fv {
     width: 100%;
     height: 100vh;
+    max-height: 800px;
     background: url(../images/common/fv.jpg) center right / cover no-repeat;
     padding-bottom: rem(32);
 
@@ -19,6 +20,7 @@
     display: flex;
     flex-direction: column;
     max-width: rem(366);
+    padding: 0;
 
     @include mq(md) {
         padding-top: rem(134);
@@ -45,7 +47,6 @@
 .p-fv__priceBanner {
     margin-top: rem(17);
     margin-left: calc(50% - 50vw);
-    padding-left: calc(50vw - 50%);
     background-color: $accent-color1;
     clip-path: polygon(0 0, calc(100% - 52px) 0, 100% 100%, 0% 100%);
     @include mq(md) {
@@ -57,9 +58,10 @@
 .p-fv__price {
     display: flex;
     justify-content: flex-end;
-    padding-right: rem(28);
+    padding-right: rem(52);
     font-weight: $bold;
     color: $white;
+    padding-block: rem(13);
     @include mq(md) {
         padding-right: rem(70);
         padding-block: rem(12);
@@ -81,6 +83,7 @@
 .p-fv__price span {
     font-size: rem(25);
     display: flex;
+    line-height: 1.25;
     align-items: center;
     @include mq(md) {
         font-size: rem(29);
@@ -91,7 +94,8 @@
 
 .p-fv__price strong {
     font-size: rem(51);
-    line-height: calc(83/51);
+    // line-height: calc(83/51);
+    line-height: 1;
     @include mq(md) {
         line-height: calc(85/68);
         font-size: rem(64);
@@ -118,4 +122,39 @@
     margin: 0 calc(50% - 50vw);
     display: flex;
     margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+@media screen and (max-height:790px) and (max-width:899px) {
+    .p-fv__texts,
+    .p-fv__image {
+        width:  calc(min((363 / 390) * 100vw, (363 / 790) * 100vh)) !important;
+        margin: 0 auto;
+    }
+    .p-fv__price {
+        padding-right: calc(min((52 / 390) * 100vw, (52 / 790) * 100vh)) !important;
+    }
+    .p-fv__price span {
+        font-size: calc(min((25 / 390) * 100vw, (25 / 790) * 100vh)) !important;
+    }
+    .p-fv__price strong {
+        font-size: calc(min((51 / 390) * 100vw, (51 / 790) * 100vh)) !important;
+    }
+    .p-fv__price small {
+        font-size: calc(min((14 / 390) * 100vw, (14 / 790) * 100vh)) !important;
+    }
+    .p-fv__inner {
+        max-width: calc(min((366 / 390) * 100vw, (366 / 790) * 100vh)) !important;
+        padding-top: calc(min((92 / 390) * 100vw, (92 / 790) * 100vh)) !important;
+    }
+    .p-fv__comment {
+        font-size: calc(min((10 / 390) * 100vw, (10 / 790) * 100vh)) !important;
+        margin-top: calc(min((10 / 390) * 100vw, (10 / 790) * 100vh)) !important;
+    }
+    .p-fv__priceBanner {
+        clip-path: polygon(0 0, calc(100% - (min((52 / 390) * 100vw, (52 / 790) * 100vh))) 0, 100% 100%, 0% 100%);
+    }
 }

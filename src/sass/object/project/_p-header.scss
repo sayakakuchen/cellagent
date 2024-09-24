@@ -8,9 +8,11 @@
     left: 0;
     background-color: transparent;
     z-index: 3000;
+    
 
     @include mq(md) {
         height: rem(60);
+        background-color: $white;
     }
 }
 
@@ -28,7 +30,7 @@
 .p-header__logo {
     width: 100%;
     max-width: rem(206);
-    margin-top: auto;
+    // margin-top: auto;
     margin-right: auto;
     z-index: 1;
     @include mq(md) {

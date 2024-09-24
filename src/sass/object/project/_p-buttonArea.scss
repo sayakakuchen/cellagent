@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-buttonArea {
-    background-color: $color4;
+    background-color: #164E9D;
     @include mq(md) {
         background-color: $color2;
     }
@@ -38,10 +38,11 @@
     @include mq(md) {
         width: rem(350);
         justify-content: center;
+    }
 }
 
 .p-buttonArea__c-btn {
-
+    width: 100%;
 }
 
 .p-buttonArea__text {

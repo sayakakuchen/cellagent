@@ -4,6 +4,14 @@
 
 }
 
+.p-faq__title {
+    h2 {
+        @include mq(md) {
+            font-size: rem(38);
+        }
+    }
+}
+
 .p-faq__content {
     margin-top: rem(21);
     @include mq(md) {
@@ -106,7 +114,7 @@
     width: 90%;
     font-weight: $normal;
     font-size: rem(13);
-    line-height: 1;
+    line-height: calc(18/13);
     text-align: left;
     @include mq(md) {
         font-size: rem(20);
@@ -114,6 +122,7 @@
 }
 
 .p-faq__text {
+    padding-right: rem(16);
     margin-top: rem(33);
     @include mq(md) {
         margin-top: rem(20);
@@ -135,4 +144,8 @@
     @include mq(md) {
         opacity: 0.8;
     }
+}
+
+.p-faq__itemTitle {
+    padding-right: rem(16);
 }
