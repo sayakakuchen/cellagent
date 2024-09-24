@@ -30,13 +30,13 @@
 .c-title__main {
     // display: inline-block;
     margin-top: rem(-20);
-    font-size: rem(17);
+    font-size: rem(18);
     letter-spacing: 0.06em;
     line-height: calc(20/18);
     color: $color2;
     @include mq(md) {
         margin-top: rem(-50);
-        font-size: rem(21);
+        font-size: rem(30);
         text-align: center;
         color: #1555ff;
     }

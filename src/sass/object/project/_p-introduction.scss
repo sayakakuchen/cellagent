@@ -101,6 +101,11 @@
     letter-spacing: 0.06em;
     line-height: 1;
     text-align: center;
+    margin-top: rem(6);
+
+    @include mq(md) {
+        margin-top: rem(3);
+    }
 }
 
 .p-introduction__cardContent {
@@ -148,9 +153,13 @@
 .p-introduction__cardSolutions li {
     font-weight: $regular;
     font-size: rem(16);
-    line-height: calc(20/16);
+    line-height: calc(22/16);
     letter-spacing: -0.04em;
     text-align: left;
+
+    @include mq(md) {
+        line-height: calc(20/16);
+    }
 }
 
 .slick-list {

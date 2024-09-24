@@ -33,6 +33,11 @@
 
 .p-price__title {
 
+    h2 {
+        @include mq(md) {
+            font-size: rem(38);
+        }
+    }
 }
 
 .p-price__text {
@@ -338,9 +343,10 @@ tbody td:first-child {
 .p-price__tableText p {
     font-weight: $regular;
     font-size: rem(13);
-    line-height: 1;
+    // line-height: 1;
     text-align: left;
     @include mq(md) {
         font-size: rem(15);
+        line-height: calc(23/15);
     }
 }

@@ -51,6 +51,17 @@
 
 .p-problem__title {
 
+    h2 {
+        @include mq(md) {
+            font-size: rem(26);
+        }
+    }
+
+    h2 span {
+        @include mq(md) {
+            font-size: rem(32);
+        }
+    }
 }
 
 .p-problem__texts {
