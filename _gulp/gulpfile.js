@@ -37,6 +37,14 @@ const destPath = {
   html: "../dist/",
 };
 
+const WPPath = {
+  all: "../cellagent_theme/**/*",
+  css: "../cellagent_theme/assets/css/",
+  js: "../cellagent_theme/assets/js/",
+  img: "../cellagent_theme/assets/images/",
+  html: "../cellagent_theme/",
+};
+
 const browsers = ["last 2 versions", "> 5%", "ie = 11", "not ie <= 10", "ios >= 8", "and_chr >= 5", "Android >= 5"];
 
 // HTMLファイルのコピー
@@ -88,6 +96,7 @@ const cssSass = () => {
       .pipe(sourcemaps.write("./"))
       // コンパイル済みのCSSファイルを出力先に保存
       .pipe(dest(destPath.css))
+      .pipe(dest(WPPath.css))
       // Sassコンパイルが完了したことを通知
       .pipe(
         notify({
@@ -105,6 +114,7 @@ const imgImagemin = () => {
     src(srcPath.img)
       // 変更があった画像のみ処理対象に
       .pipe(changed(destPath.img))
+      .pipe(changed(WPPath.img))
       // 画像を圧縮
       .pipe(
         imagemin(
@@ -130,9 +140,11 @@ const imgImagemin = () => {
         )
       )
       .pipe(dest(destPath.img))
+      .pipe(dest(WPPath.img))
       .pipe(webp())//webpに変換
       // 圧縮済みの画像ファイルを出力先に保存
       .pipe(dest(destPath.img))
+      .pipe(dest(WPPath.img))
   );
 };
 
@@ -155,6 +167,7 @@ const jsBabel = () => {
       )
       // 圧縮済みのファイルを出力先に保存
       .pipe(dest(destPath.js))
+      .pipe(dest(WPPath.js))
   );
 };
 
