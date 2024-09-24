@@ -2,6 +2,12 @@
 // ========================================
 // content
 // ========================================
+.p-service {
+    @include mq(md) {
+        padding-bottom: rem(90);
+    }
+}
+
 .p-service__wrap {
     margin-top: rem(74);
     width: 100vw;
@@ -14,6 +20,7 @@
         margin: 0;
         margin-top: rem(74);
         border-radius: 20px;
+        padding-top: rem(72);
     }
 }
 
@@ -56,7 +63,8 @@
     text-align: center;
     color: $color2;
     @include mq(md) {
-        margin-top: rem(72);
+        // margin-top: rem(72);
+        margin-top: 0;
         font-size: rem(23);
         letter-spacing: 0.1em;
         line-height: calc(24/23);
@@ -141,6 +149,7 @@
         width: 60%;
         padding: rem(30) rem(33);
         z-index: 500;
+        margin-top: 0;
     }
 }
 

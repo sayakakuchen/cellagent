@@ -51,6 +51,10 @@
 .p-whatWeDo__item {
     padding: rem(20) rem(20);
     border-radius: 20px;
+
+    @include mq(md) {
+        padding: rem(30) rem(25) rem(20);
+    }
 }
 
 .p-whatWeDo__item--1 {

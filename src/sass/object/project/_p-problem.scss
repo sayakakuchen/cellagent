@@ -29,13 +29,14 @@
 
 .p-problem::after {
     content: "";
-    background: url(../images/common/arrow.svg) center center / contain no-repeat;
+    background: url(../images/common/big-arrow.svg) center center / contain no-repeat;
     position: absolute;
     width: rem(82);
     height: rem(24);
     bottom: rem(-64);
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1;
     @include mq(md) {
         width: rem(156);
         height: rem(46);
