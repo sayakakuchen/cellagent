@@ -32,10 +32,12 @@
 
 .p-buttonArea__item {
     width: 100%;
-
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
     @include mq(md) {
         width: rem(350);
-    }
+        justify-content: center;
 }
 
 .p-buttonArea__c-btn {
