@@ -19,16 +19,23 @@
     gap: rem(22);
     align-items: center;
     @include mq(md) {
+        width: fit-content;
         padding-top: rem(20);
         padding-bottom: rem(16);
         flex-direction: row;
         align-items: flex-end;
         justify-content: center;
+        margin-inline: auto;
+        gap: rem(70);
     }
 }
 
 .p-buttonArea__item {
     width: 100%;
+
+    @include mq(md) {
+        width: rem(350);
+    }
 }
 
 .p-buttonArea__c-btn {
