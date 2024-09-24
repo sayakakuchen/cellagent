@@ -103,12 +103,12 @@
 
 .c-btn--cta {
     @include mq(md) {
-        width: rem(405);
+        max-width: rem(405);
         height: rem(69);
         
     }
     @include mq(lg) {
-        width: rem(476);
+        max-width: rem(476);
         height: rem(81);
     }
 }

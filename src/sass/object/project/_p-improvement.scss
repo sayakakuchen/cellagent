@@ -70,7 +70,7 @@
     align-items: center;
     @include mq(md) {
         width: 35%;
-        gap: rem(33.3);
+        gap: rem(24);
     }
 }
 
@@ -121,7 +121,7 @@
     text-align: center;
     @include mq(md) {
         font-size: rem(21);
-        line-height: calc(30/21);
+        line-height: 2;
     }
 }
 
