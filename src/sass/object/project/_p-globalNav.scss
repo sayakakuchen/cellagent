@@ -28,10 +28,11 @@
 }
 
 .p-globalNav__link {
-    flex-shrink: 1;
+    height: inherit;
     font-size: rem(13);
     line-height: calc(13/13);
-    height: inherit;
+    font-weight: $normal;
+    flex-shrink: 1;
     @include mq(md) {
         white-space: nowrap;
     }

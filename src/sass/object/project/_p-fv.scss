@@ -47,7 +47,7 @@
     margin-left: calc(50% - 50vw);
     padding-left: calc(50vw - 50%);
     background-color: $accent-color1;
-    clip-path: polygon(0 0, calc(100% - 67px) 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, calc(100% - 52px) 0, 100% 100%, 0% 100%);
     @include mq(md) {
         margin-top: rem(20);
         clip-path: polygon(0 0, calc(100% - 80px) 0, 100% 100%, 0% 100%);
@@ -57,7 +57,7 @@
 .p-fv__price {
     display: flex;
     justify-content: flex-end;
-    padding-right: rem(52);
+    padding-right: rem(28);
     font-weight: $bold;
     color: $white;
     @include mq(md) {
@@ -90,7 +90,9 @@
 
 .p-fv__price strong {
     font-size: rem(51);
+    line-height: calc(83/51);
     @include mq(md) {
+        line-height: calc(85/68);
         font-size: rem(64);
     }
 }

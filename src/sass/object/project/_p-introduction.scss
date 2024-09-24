@@ -148,7 +148,8 @@
 .p-introduction__cardSolutions li {
     font-weight: $regular;
     font-size: rem(16);
-    line-height: 1;
+    line-height: calc(20/16);
+    letter-spacing: -0.04em;
     text-align: left;
 }
 
@@ -169,13 +170,19 @@
 
 .prev-arrow {
     bottom: rem(15);
-    left: calc(50% - 65px);
+    left: calc(50% - 63px);
+    @include mq(md) {
+        left: calc(50% - 70px);
+    }
 }
 
 .next-arrow {
-    bottom: rem(32);
-    right: calc(50% - 65px);
+    bottom: rem(36);
+    right: calc(50% - 77px);
     transform: rotate(180deg);
+    @include mq(md) {
+        right: calc(50% - 70px);
+    }
 }
 
 .slide-arrow:hover {
@@ -185,9 +192,3 @@
         opacity: 0.8;
     }
 }
-
-// .p-introduction__card.slick-slide.slick-current.slick-active {
-//     @include mq(md) {
-//         width: unset !important;
-//     }
-// }

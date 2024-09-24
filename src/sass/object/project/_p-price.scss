@@ -69,176 +69,163 @@ table {
     }
 }
 
-// thead
-thead th {
-    width: 100%;
-    display: block;
-    padding: rem(6);
-    @include mq(md) {
-        display: table-cell;
-    }
-}
-
-thead th:nth-child(2) span {
-    background-color: #C5E7F6;
-    color: $color4;
-}
-
-thead th:nth-child(3) span {
-    background-color: #5D89FF;
-    color: $white;
-}
-
-thead th:nth-child(4) span {
-    background-color: #2355FF;
-    color: $white;
-}
-
-// tbody
-tbody th {
-    width: 100%;
-    display: block;
-    font-weight: $regular;
-    font-size: rem(15);
-    letter-spacing: 0.06em;
-    line-height: 1;
-    background-color: $lightGray;
-    padding: rem(6);
-    @include mq(md) {
-        width: 26%;
-        height: 100%;
-        font-size: rem(18);
-        font-weight: 600;
-    }
-}
-
-tbody th span {
-    padding-block: rem(27);
-    width: 100%;
-    height: 100%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: $bold;
-    font-size: rem(20);
-    letter-spacing: 0.06em;
-    line-height: 1;
-    text-align: center;
-    color: $color4;
-    background-color: #C5E7FF;
-    @include mq(md) {
-        width: 100%;
-        height: 100%;
-        font-size: rem(24);
-    }
-}
-
-tbody td {
-    width: 100%;
-    display: block;
-    @include mq(md) {
-        
-    }
-}
-
-tbody td p {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: rem(9.5) rem(20);
-    justify-content: center;
-    align-items: center;
-    width: rem(110);
-    height: rem(25.57);
-    color: $black;
-    background-color: #C5E7F6;
-    font-weight: $regular;
-    font-size: rem(13);
-    letter-spacing: 0.06em;
-    line-height: 1;
-    text-align: center;
-    border-radius: 20px;
-    @include mq(md) {
-        width: rem(132);
-        height: rem(30.68);
-        font-weight: 600;
-        gap: rem(12) rem(24);
-        font-size: rem(15);
-    }
-}
-
-// th span {
-
-// }
-
-// td {
-//     @include mq(md) {
-//         border-left: 3px solid $lightGray;
-//         border-top: 3px solid $lightGray;
-//         border-collapse: collapse;
-//     }
-// }
-
-// tbody tr:first-child td {
-//     @include mq(md) {
-//         border-top: none;
-//     }
-// }
-
-// tbody tr td:nth-child(2) {
-//     @include mq(md) {
-//         border-left: none;
-//     }
-// }
-
-tbody td:first-child {
-    border-top: none;
-    border-left:none;
-}
-
 thead,
 tbody {
     text-align: center;
 }
 
-
+// thead
 thead th {
+    width: 100%;
+    height: rem(70);
+    display: block;
+    padding: rem(5);
     @include mq(md) {
         width: 26%;
+        padding: rem(6);
         height: rem(72);
+        display: table-cell;
+    }
+}
+
+table tbody td:nth-of-type(3) {
+    border-bottom: 5px solid #e6e6e6;
+    @include mq(md) {
+        border-bottom: none;
+    }
+}
+
+table thead:nth-of-type(2) th,
+table thead:nth-of-type(3) th {
+    margin-top: rem(20);
+}
+
+
+thead th span {
+    width: 100%;
+    height: rem(60);
+    font-size: rem(20);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: $bold;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    @include mq(md) {
+        width: 100%;
+        height: 100%;
+        padding-block: rem(27);
+        text-align: center;
+        font-size: rem(24);
+    }
+}
+
+table thead:nth-of-type(1) th span {
+    background-color: #C5E7F6;
+    color: $color4;
+}
+
+table thead:nth-of-type(2) th span {
+    background-color: #5D89FF;
+    color: $white;
+}
+
+table thead:nth-of-type(3) th span {
+    background-color: #2355FF;
+    color: $white;
+}
+
+thead th:nth-child(2) span {
+    @include mq(md) {
+        background-color: #C5E7F6 !important;
+        color: $color4 !important;
+    }
+}
+
+
+thead th:nth-child(3) span {
+    @include mq(md) {
+        background-color: #5D89FF !important;
+        color: $white !important;
+    }
+}
+
+thead th:nth-child(4) span {
+    @include mq(md) {
+        background-color: #2355FF !important;
+        color: $white !important;
+    }
+}
+
+// tbody
+tbody th {
+    width: 100%;
+    height: rem(40);
+    display: block;
+    font-weight: $regular;
+    font-size: rem(15);
+    letter-spacing: 0.06em;
+    line-height: 1;
+    padding: rem(5);
+    @include mq(md) {
+        padding: rem(6);
+        width: 19.25%;
+        height: auto;
+        font-size: rem(18);
+        font-weight: 600;
+        display: table-cell;
+    }
+}
+
+tbody th span {
+    width: 100%;
+    height: rem(30);
+    font-weight: $regular;
+    font-size: rem(20);
+    letter-spacing: 0.06em;
+    line-height: 1;
+    color: $color4;
+    background-color: $lightGray;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include mq(md) {
+        height: inherit;
+        padding-block: rem(27);
+        font-size: rem(24);
+        font-weight: $bold;
     }
 }
 
 tbody td {
-    background-color: $white;
-    font-weight: $bold;
-    font-size: rem(24);
-    letter-spacing: 0.06em;
-    line-height: 1;
-    color: $color4;
     width: 100%;
+    display: block;
+    font-size: rem(24);
+    font-weight: $bold;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    color: $color4;
+    background-color: $white;
     @include mq(md) {
         width: unset;
+        display: table-cell;
+        padding-top: rem(24);
+        padding-bottom: rem(28);
         font-size: rem(28);
     }
 }
 
-tbody p:nth-child(5),
-tbody p:nth-child(6) {
-    background-color: #CBD9FC;
-}
-
-tbody td span {
-    font-size: rem(18);
-    font-weight: $regular;
+tbody td:nth-of-type(1) {
+    padding-block: rem(20);
     @include mq(md) {
-        font-size: rem(21);
+        padding-block: 0;
     }
 }
 
-tbody small {
-    font-size: rem(13);
+tbody td:nth-of-type(3) {
+    padding-block: rem(17) rem(9);
     @include mq(md) {
-        font-size: rem(15);
+        padding-block: 0;
     }
 }
 
@@ -250,7 +237,92 @@ tbody td:nth-child(4) {
     color: $color2;
 }
 
+tbody td span {
+    font-size: rem(18);
+    font-weight: $regular;
+    @include mq(md) {
+        font-size: rem(21);
+    }
+}
 
+
+tbody p {
+    width: rem(110);
+    height: rem(25.57);
+    font-size: rem(13);
+    font-weight: $regular;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    color: $black;
+    background-color: #C5E7F6;
+    border-radius: 20px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: rem(9.5) rem(20);
+    @include mq(sm) {
+        
+    }
+    @include mq(md) {
+        width: rem(132);
+        height: rem(30.68);
+        font-size: rem(15);
+        font-weight: 600;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: rem(12) rem(24);
+    }
+}
+
+tbody p:nth-child(5),
+tbody p:nth-child(6) {
+    background-color: #CBD9FC;
+}
+
+tbody small {
+    font-size: rem(13);
+    @include mq(md) {
+        font-size: rem(15);
+    }
+}
+
+
+
+// ========================================
+// ボーダーの指定
+// ========================================
+td {
+    @include mq(md) {
+        border-left: 3px solid $lightGray;
+        border-top: 3px solid $lightGray;
+        border-collapse: collapse;
+    }
+}
+
+tbody tr:first-child td {
+    @include mq(md) {
+        border-top: none;
+    }
+}
+
+tbody tr td:nth-child(2) {
+    @include mq(md) {
+        border-left: none;
+    }
+}
+
+thead td:first-child {
+    border-top: none;
+    border-left:none;
+}
+
+tbody td:first-child {
+    border-top: none;
+    border-left:none;
+}
 // ========================================
 // テーブル下のテキスト
 // ========================================

@@ -4,7 +4,7 @@
     padding-top: rem(40);
     position: relative;
 @include mq(md) {
-    margin-top: rem(57);
+    padding-top: rem(57);
 }
 }
 
@@ -51,6 +51,9 @@
 .p-whatWeDo__item {
     padding: rem(20) rem(20);
     border-radius: 20px;
+    @include mq(md) {
+        padding-top: rem(31);
+    }
 }
 
 .p-whatWeDo__item--1 {
@@ -185,6 +188,7 @@
     line-height: 1;
     text-align: center;
     @include mq(md) {
+        padding: rem(12) rem(10);
         font-size: rem(18);
         letter-spacing: 0.06em;
     }

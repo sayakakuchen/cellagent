@@ -30,13 +30,13 @@
 .c-title__main {
     // display: inline-block;
     margin-top: rem(-20);
-    font-size: rem(18);
+    font-size: rem(17);
     letter-spacing: 0.06em;
     line-height: calc(20/18);
     color: $color2;
     @include mq(md) {
         margin-top: rem(-50);
-        font-size: rem(34);
+        font-size: rem(21);
         text-align: center;
         color: #1555ff;
     }
@@ -78,6 +78,37 @@
     color: $accent-color1;
     font-size: rem(20);
     @include mq(md) {
+        font-size: rem(32);
+    }
+}
+
+// ========================================
+// サイズの指定
+// ========================================
+.c-title__main {
+
+    .--xs {
+        @include mq(md) {
+            font-size: rem(25);
+        }
+    }
+    .--sm {
+        @include mq(md) {
+            font-size: rem(26);
+        }
+    }
+
+    .--md {
+        @include mq(md) {
+            font-size: rem(30);
+        }
+    }
+
+    .--lg {
+        font-size: rem(34);
+    }
+
+    .--xl {
         font-size: rem(38);
     }
 }

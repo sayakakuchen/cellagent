@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-merit {
-    padding-block: rem(40) rem(48);
+    padding-block: rem(40) rem(25);
     background: linear-gradient(180deg, #ebebeb 0%, #ebebeb 67%, #d9d9d9 67%, #d9d9d9 100%);
     overflow: hidden;
     @include mq(md) {
