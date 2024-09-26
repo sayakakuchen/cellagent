@@ -344,7 +344,7 @@ a {
 
 .c-title__main {
 	color: #1555FF;
-	font-size: 1.125rem;
+	font-size: 1.6875rem;
 	letter-spacing: 0.06em;
 	line-height: 1.1111111111;
 	margin-top: -1.25rem;
@@ -375,15 +375,7 @@ a {
 
 .c-title__main span {
 	color: #FF4D00;
-	font-size: 1.25rem;
-}
-
-.c-title__main .--lg {
-	font-size: 2.125rem;
-}
-
-.c-title__main .--xl {
-	font-size: 2.375rem;
+	font-size: 1.6875rem;
 }
 
 .c-underBg {
@@ -2118,18 +2110,6 @@ html {
 
 .c-title__main span {
 	font-size: 2rem;
-}
-
-.c-title__main .--xs {
-	font-size: 1.5625rem;
-}
-
-.c-title__main .--sm {
-	font-size: 1.625rem;
-}
-
-.c-title__main .--md {
-	font-size: 1.875rem;
 }
 
 .c-underBg::before {
