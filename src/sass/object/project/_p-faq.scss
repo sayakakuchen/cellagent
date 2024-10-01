@@ -4,13 +4,6 @@
 
 }
 
-.p-faq__title {
-    h2 {
-        @include mq(md) {
-            font-size: rem(38);
-        }
-    }
-}
 
 .p-faq__content {
     margin-top: rem(21);

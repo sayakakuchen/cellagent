@@ -5,8 +5,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #707070;
+    background-color: #171C61;
     height: rem(150);
+
+    @include mq(md) {
+        height: rem(116);
+    }
 }
 
 .p-subMv__inner {
@@ -14,11 +18,33 @@
 }
 
 .p-subMv__title {
+    position: relative;
     color: $white;
     font-size: rem(24);
     font-weight: 700;
     letter-spacing: 0.06em;
-    text-align: center;
+    text-align: left;
+    padding-left: rem(30);
+
+    @include mq(md) {
+        padding-left: rem(50);
+    }
+}
+
+.p-subMv__title::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: rem(30);
+    top: 50%;
+    transform: translateY(-50%);
+    left: rem(0);
+    background-color: $white;
+
+    @include mq(md) {
+        width: 3px;
+        height: rem(60);
+    }
 }
 
 .p-subMv__breadbrmb {
@@ -31,6 +57,7 @@
     padding-right: $padding-sp;
     padding-left: $padding-sp;
     bottom: rem(5);
+    display: none;
 
     @include mq(md) {
         max-width: rem(1200);

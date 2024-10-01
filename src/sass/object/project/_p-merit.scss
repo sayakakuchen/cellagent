@@ -16,22 +16,6 @@
     }
 }
 
-.p-merit__title {
-
-    h2 {
-        font-size: rem(18);
-        @include mq(md) {
-            font-size: rem(34);
-        }
-    }
-
-    h2 span {
-        font-size: rem(20);
-        @include mq(md) {
-            font-size: rem(38);
-        }
-    }
-}
 
 .p-merit__text {
     margin-top: rem(32);
@@ -72,6 +56,14 @@
     }
 }
 
+.p-merit__card + .p-merit__card {
+    margin-top: rem(54);
+
+    @include mq(md) {
+        margin-top: 0;
+    }
+}
+
 .merit__number {
     font-weight: $bold;
     font-size: rem(25);
@@ -98,7 +90,7 @@
 
 .p-merit__cardTitle {
     font-weight: $bold;
-    font-size: rem(18);
+    font-size: 1.2rem;
     letter-spacing: 0.06em;
     line-height: calc(24/18);
     text-align: center;
@@ -149,7 +141,7 @@
 
 .p-merit__description {
     margin-top: rem(20);
-    font-size: rem(13);
+    font-size: 0.9rem;
     line-height: calc(20/13);
     text-align: center;
     @include mq(md) {

@@ -31,21 +31,6 @@
 
 }
 
-.p-whatWeDo__title {
-
-    h2 {
-        @include mq(md) {
-            font-size: rem( 34);
-        }
-    }
-
-    h2 span {
-        @include mq(md) {
-            font-size: rem(38);
-        }
-    }
-}
-
 .p-whatWeDo__items {
     margin-top: rem(30);
     display: grid;
@@ -85,7 +70,7 @@
 
 .p-whatWeDo__itemTitle {
     font-weight: $bold;
-    font-size: rem(15);
+    font-size: 1.4rem;
     letter-spacing: 0.06em;
     line-height: 1;
     text-align: center;

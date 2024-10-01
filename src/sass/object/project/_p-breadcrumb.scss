@@ -1,7 +1,9 @@
 @use 'global' as *;
 
 .p-breadcrumb {
-
+    background-color: $white;
+    padding-block: rem(10);
+    border-top: 1px solid #707070;
 }
 
 .p-breadcrumb ol {
@@ -20,7 +22,6 @@
     font-weight: 500;
     line-height: calc(22/14);
     letter-spacing: 0.06em;
-    color: $white;
 
     @include mq(md) {
         font-size: rem(14);
@@ -31,7 +32,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $white;
     content: ">";
     position: absolute;
     width: 1em;

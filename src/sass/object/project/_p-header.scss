@@ -68,4 +68,14 @@
 .p-header__btn {
     display: flex;
     gap: 3%;
+
+    @include mq(md) {
+        gap: rem(10);
+        margin-left: rem(5);
+    }
+
+    @include mq(lg) {
+        gap: 3%;
+        margin-left: 0;
+    }
 }

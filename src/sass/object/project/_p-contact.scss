@@ -23,3 +23,15 @@
         margin-top: rem(70);
     }
 }
+
+.p-contact__lead {
+    margin-top: rem(20);
+    font-size: rem(14);
+    line-height: 1.5;
+
+    @include mq(md) {
+        font-size: rem(20);
+        text-align: center;
+        margin-top: rem(45);
+    }
+}
