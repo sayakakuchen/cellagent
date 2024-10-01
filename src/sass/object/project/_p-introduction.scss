@@ -156,10 +156,6 @@
     line-height: calc(22/16);
     letter-spacing: -0.04em;
     text-align: left;
-
-    @include mq(md) {
-        line-height: calc(20/16);
-    }
 }
 
 .slick-list {

@@ -26,6 +26,7 @@
         padding-top: rem(134);
         flex-direction: row;
         align-items: center;
+        max-width: 1250px;
     }
 }
 
@@ -33,6 +34,10 @@
     @include mq(md) {
         width: 43%;
     }
+}
+
+.p-fv__texts h1 {
+    display: none;
 }
 
 .p-fv__image {
@@ -59,18 +64,22 @@
     display: flex;
     justify-content: flex-end;
     padding-right: rem(52);
+    align-items: baseline;
     font-weight: $bold;
     color: $white;
-    padding-block: rem(13);
+    padding-block: rem(4);
     @include mq(md) {
+        align-items: end;
         padding-right: rem(70);
         padding-block: rem(12);
     }
 }
 
 .p-fv__price span {
-    display: inline-flex;
-    flex-direction: column-reverse;
+    @include mq(md) {
+        display: inline-flex;
+        flex-direction: column-reverse;
+    }
 }
 
 .p-fv__price small {
@@ -141,7 +150,7 @@
         font-size: calc(min((25 / 390) * 100vw, (25 / 790) * 100vh)) !important;
     }
     .p-fv__price strong {
-        font-size: calc(min((51 / 390) * 100vw, (51 / 790) * 100vh)) !important;
+        font-size: calc(min((40 / 390) * 100vw, (40 / 790) * 100vh)) !important;
     }
     .p-fv__price small {
         font-size: calc(min((14 / 390) * 100vw, (14 / 790) * 100vh)) !important;

@@ -28,11 +28,17 @@
 
 
 .c-title__main {
-    margin-top: rem(-20);
-    font-size: rem(27);
+    // display: inline-block;
+    // margin-top: rem(-20);
+    // font-size: rem(18);
+    // letter-spacing: 0.06em;
+    // line-height: calc(20/18);
+    // color: $color2;
+    color: #1555FF;
+    font-size: 1.7rem;
     letter-spacing: 0.06em;
-    line-height: calc(20/18);
-    color: $color2;
+    line-height: 1.1111111111;
+    margin-top: -1.25rem;
     @include mq(md) {
         margin-top: rem(-50);
         font-size: rem(30);
@@ -75,7 +81,7 @@
 
 .c-title__main span {
     color: $accent-color1;
-    font-size: rem(27);
+    font-size: rem(20);
     @include mq(md) {
         font-size: rem(32);
     }

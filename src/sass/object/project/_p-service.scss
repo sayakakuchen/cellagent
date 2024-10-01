@@ -55,7 +55,7 @@
 .p-service__text {
     margin-top: rem(23);
     font-weight: $bold;
-    font-size: rem(16);
+    font-size: 1.5rem;
     letter-spacing: 0.06em;
     line-height: calc(20/16);
     text-align: center;
@@ -153,19 +153,4 @@
 
 .p-service__communicatorImage {
     
-}
-
-.p-service__title h2 {
-    font-size: rem(18);
-    line-height: calc(27/18);
-    @include mq(md) {
-        font-size: rem(25);
-    }
-}
-
-.p-service__title h2 span {
-    font-size: rem(20);
-    @include mq(md) {
-        font-size: rem(28);
-    }
 }
