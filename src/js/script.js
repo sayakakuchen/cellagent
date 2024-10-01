@@ -60,6 +60,24 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             },
             },
         ],
-        });
+    });
+
+    $('.js-about-slider').slick({
+        slidesToShow:3,
+        dots: false,
+        arrow:true,
+        autoplay:true,
+        prevArrow: '<div class="slide-arrow prev-arrow"></div>',
+        nextArrow: '<div class="slide-arrow next-arrow"></div>',
+        dotsClass: 'slider-dots',
+        responsive: [
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 1, 
+              }
+            }
+        ]
+    });
 
 });
