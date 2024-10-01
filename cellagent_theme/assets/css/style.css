@@ -2056,11 +2056,18 @@ tbody td:first-child {
 	padding: 1.1875rem;
 }
 
+.p-step.--gray {
+	background-color: #EBEBEB;
+	padding-bottom: 2.5rem;
+	padding-top: 5rem;
+}
+
 .p-step_blocks {
 	margin-top: 3.75rem;
 }
 
 .p-step__block {
+	background-color: #fff;
 	border-radius: 1.25rem;
 	box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(0, 0, 0, 0.2);
 	position: relative;

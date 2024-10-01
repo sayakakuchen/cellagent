@@ -4,6 +4,12 @@
 
 }
 
+.p-step.--gray {
+    padding-top: rem(80);
+    padding-bottom: rem(40);
+    background-color: #EBEBEB;
+}
+
 .p-step__inner {
 
 }
@@ -25,6 +31,7 @@
     border-radius: rem(20);
     box-shadow: rem(3) rem(3) rem(8) rgba($color: #000000, $alpha: 0.2);
     z-index: 1;
+    background-color: $white;
 
     @include mq(md) {
         max-width: rem(1100);
