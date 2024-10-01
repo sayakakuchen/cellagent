@@ -2182,18 +2182,6 @@ html {
 	font-size: 2rem;
 }
 
-.c-title__main .--xs {
-	font-size: 1.5625rem;
-}
-
-.c-title__main .--sm {
-	font-size: 1.625rem;
-}
-
-.c-title__main .--md {
-	font-size: 1.875rem;
-}
-
 .c-underBg::before {
 	background-image: url("../images/common/bgLeft.png"), url("../images/common/bgRight.png");
 }

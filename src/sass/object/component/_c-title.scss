@@ -80,10 +80,8 @@
 }
 
 .c-title__main span {
-    // color: $accent-color1;
-    // font-size: rem(20);
-    color: #FF4D00;
-    font-size: 1.7rem;
+    color: $accent-color1;
+    font-size: rem(20);
     @include mq(md) {
         font-size: rem(32);
     }
@@ -92,30 +90,3 @@
 // ========================================
 // サイズの指定
 // ========================================
-.c-title__main {
-
-    .--xs {
-        @include mq(md) {
-            font-size: rem(25);
-        }
-    }
-    .--sm {
-        @include mq(md) {
-            font-size: rem(26);
-        }
-    }
-
-    .--md {
-        @include mq(md) {
-            font-size: rem(30);
-        }
-    }
-
-    .--lg {
-        font-size: rem(34);
-    }
-
-    .--xl {
-        font-size: rem(38);
-    }
-}
