@@ -272,6 +272,47 @@ a {
 	width: 1.25rem;
 }
 
+.c-card {
+	display: block;
+}
+
+.c-card__thumbnail img {
+	-o-object-fit: cover;
+	aspect-ratio: 370/220;
+	height: 100%;
+	object-fit: cover;
+}
+
+.c-card__cats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3125rem 0.625rem;
+	margin-top: 1rem;
+}
+
+.c-card__cat {
+	color: #1555FF;
+	font-size: 0.875rem;
+	font-weight: bold;
+	letter-spacing: 0.06em;
+}
+
+.c-card__title {
+	font-size: 1rem;
+	font-weight: bold;
+	letter-spacing: 0.06em;
+	line-height: 1.5555555556;
+	margin-top: 0.875rem;
+}
+
+.c-card__time {
+	display: block;
+	font-size: 0.75rem;
+	font-weight: 300;
+	letter-spacing: 0.06em;
+	margin-top: 1.25rem;
+}
+
 .c-hamburger {
 	background-color: #fff;
 	border-bottom-left-radius: 15px;
@@ -326,6 +367,36 @@ a {
 	margin-bottom: 6.25rem;
 	margin-top: 6.25rem;
 	text-align: center;
+}
+
+.c-search {
+	height: 2.875rem;
+	position: relative;
+}
+
+.c-search button {
+	background: url(../images/common/icon_search.svg) center center/1.5rem no-repeat;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	width: 3.75rem;
+}
+
+.c-search input {
+	border: 1px solid #BEBEBE;
+	border-radius: 1.4375rem;
+	display: inline-block;
+	height: 100%;
+	padding-left: 3.75rem;
+	width: 100%;
+}
+
+.c-search input::-moz-placeholder {
+	color: #BEBEBE;
+}
+
+.c-search input::placeholder {
+	color: #BEBEBE;
 }
 
 .c-title {
@@ -527,6 +598,114 @@ a {
 	font-size: 1rem;
 	font-weight: 500;
 	line-height: 1.4444444444;
+}
+
+.p-archive__pickup {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3.75rem;
+	max-width: 70.625rem;
+}
+
+.p-archive__pickup .slide-arrow {
+	bottom: -3.75rem;
+	transform: translateY(0);
+}
+
+.p-archive__pickup .next-arrow {
+	transform: translateY(0) rotate(180deg);
+}
+
+.p-archive__pickup .p-archive__card {
+	margin: 0 0.9375rem;
+}
+
+.p-archive__wrap {
+	grid-gap: 3.75rem;
+	display: grid;
+	gap: 3.75rem;
+	margin-top: 7.5rem;
+}
+
+.p-archive__cards {
+	grid-gap: 1.5625rem;
+	display: grid;
+	gap: 1.5625rem;
+}
+
+.p-archive__nav {
+	margin-top: 3.75rem;
+}
+
+.nav-links {
+	align-items: center;
+	display: flex;
+	gap: 1.375rem;
+	justify-content: center;
+}
+
+.page-numbers {
+	align-items: center;
+	display: flex;
+	font-size: 1.125rem;
+	font-weight: 500;
+	justify-content: center;
+}
+
+.page-numbers.prev {
+	width: 2.5rem;
+}
+
+.page-numbers.next {
+	transform: rotate(180deg);
+	width: 2.5rem;
+}
+
+.page-numbers.current {
+	background-color: #D3F3FF;
+	border-radius: 50%;
+	height: 3.75rem;
+	width: 3.75rem;
+}
+
+.p-aside__blocks {
+	margin-top: 2.5rem;
+}
+
+.p-aside__title {
+	font-size: 1.125rem;
+	padding-bottom: 1rem;
+}
+
+.p-aside__links {
+	margin-top: 0.625rem;
+}
+
+.p-aside__link {
+	border-bottom: 1px solid #707070;
+}
+
+.p-aside__link a {
+	display: block;
+	font-size: 1rem;
+	padding-bottom: 0.75rem;
+	padding-top: 0.75rem;
+}
+
+.p-aside__block + .p-aside__block {
+	margin-top: 1.25rem;
+}
+
+.p-aside__cards {
+	margin-top: 1.875rem;
+}
+
+.p-aside__card .c-card__title {
+	font-weight: 500;
+}
+
+.p-aside__card + .p-aside__card {
+	margin-top: 1.875rem;
 }
 
 .p-breadcrumb {
@@ -2056,6 +2235,115 @@ tbody td:first-child {
 	padding: 1.1875rem;
 }
 
+.p-single__wrap {
+	grid-gap: 3.75rem;
+	display: grid;
+	gap: 3.75rem;
+	margin-top: 6.25rem;
+}
+
+.p-single__content h2 {
+	background-color: #171C61;
+	border-radius: 0.3125rem;
+	color: #fff;
+	padding: 1.4375rem 1.25rem;
+}
+
+.p-single__content * + h2 {
+	margin-top: 3.125rem;
+}
+
+.p-single__content h3 {
+	border-bottom: 1px solid #ccc;
+	color: #171C61;
+	font-size: 1.5rem;
+	font-weight: bold;
+	line-height: 1.25;
+	padding-bottom: 1.5rem;
+}
+
+.p-single__content * + h3 {
+	margin-top: 3.125rem;
+}
+
+.p-single__content h4 {
+	font-size: 1.125rem;
+	font-weight: bold;
+	line-height: 2.1428571429;
+}
+
+.p-single__content * + h4 {
+	margin-top: 3.125rem;
+}
+
+.p-single__content * + * {
+	margin-top: 1.875rem;
+}
+
+.p-single__content p {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.875;
+	margin-top: 1.875rem;
+}
+
+.p-single__content iframe {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 56.25rem;
+	width: 100%;
+}
+
+.p-single__content ul {
+	font-size: 1rem;
+	line-height: 2.25;
+	list-style: disc;
+	margin-left: 1.5em;
+}
+
+.p-single__content ul li + li {
+	margin-top: 0;
+}
+
+.p-single__content ol {
+	counter-reset: number 0;
+	font-size: 1rem;
+	line-height: 2.25;
+}
+
+.p-single__content ol li {
+	align-items: center;
+	display: flex;
+	gap: 0.5em;
+	position: relative;
+}
+
+.p-single__content ol li + li {
+	margin-top: 0;
+}
+
+.p-single__content ol li::before {
+	align-items: center;
+	border: 1px solid #000;
+	border-radius: 50%;
+	content: counter(number);
+	counter-increment: number 1;
+	display: flex;
+	font-size: 0.75em;
+	height: 1rem;
+	justify-content: center;
+	width: 1rem;
+}
+
+.p-single__content a {
+	-webkit-text-decoration: underline;
+	color: #00a0e9;
+	font-size: 1rem;
+	font-weight: 400;
+	text-decoration: underline;
+}
+
 .p-step.--gray {
 	background-color: #EBEBEB;
 	padding-bottom: 2.5rem;
@@ -2404,6 +2692,23 @@ html {
 	max-width: 25.3125rem;
 }
 
+.c-card__cats {
+	margin-top: 1.25rem;
+}
+
+.c-card__cat {
+	font-size: 1rem;
+}
+
+.c-card__title {
+	font-size: 1.125rem;
+}
+
+.c-card__time {
+	font-size: 0.9375rem;
+	margin-top: 1.25rem;
+}
+
 .c-title__sub {
 	font-size: 3.75rem;
 	letter-spacing: 0.06em;
@@ -2520,6 +2825,45 @@ html {
 
 .p-about__list {
 	font-size: 1.125rem;
+}
+
+.p-archive__pickup {
+	margin-top: 5rem;
+}
+
+.p-archive__pickup .slide-arrow {
+	bottom: -5.625rem;
+}
+
+.p-archive__wrap {
+	align-items: flex-start;
+	gap: 3.5rem;
+	grid-template-columns: 64.5% 1fr;
+	margin-top: 10.625rem;
+}
+
+.p-archive__cards {
+	gap: 3.125rem 2.1875rem;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.p-aside__title {
+	font-size: 1.25rem;
+	padding-bottom: 1.25rem;
+}
+
+.p-aside__link a {
+	font-size: 1.125rem;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+}
+
+.p-aside__block + .p-aside__block {
+	margin-top: 1.875rem;
+}
+
+.p-aside__card + .p-aside__card {
+	margin-top: 2.5rem;
 }
 
 .p-breadcrumb li span {
@@ -3351,6 +3695,25 @@ tbody tr td:nth-child(2) {
 	padding: 1.875rem 2.0625rem;
 	width: 60%;
 	z-index: 500;
+}
+
+.p-single__wrap {
+	align-items: flex-start;
+	gap: 3.5rem;
+	grid-template-columns: 64.5% 1fr;
+	margin-top: 8.75rem;
+}
+
+.p-single__content h2 {
+	padding: 1.4375rem 1.625rem;
+}
+
+.p-single__content * + * {
+	margin-top: 3.125rem;
+}
+
+.p-single__content p {
+	margin-top: 3.125rem;
 }
 
 .p-step_blocks {

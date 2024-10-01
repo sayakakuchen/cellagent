@@ -1,0 +1,140 @@
+@use 'global' as *;
+
+.p-single {
+
+}
+
+.p-single__inner {
+
+}
+
+.p-single__title {
+
+}
+
+.p-single__wrap {
+    display: grid;
+    gap: rem(60);
+    margin-top: rem(100);
+
+    @include mq(md) {
+        align-items: flex-start;
+        grid-template-columns: 64.5% 1fr;
+        gap: rem(56);
+        margin-top: rem(140);
+    }
+}
+
+.p-single__content {
+    h2 {
+        background-color: #171C61;
+        color: $white;
+        border-radius: rem(5);
+        padding: rem(23) rem(20);
+
+        @include mq(md) {
+            padding: rem(23) rem(26);
+        }
+    }
+
+    * + h2 {
+        margin-top: rem(50);
+    }
+
+    h3 {
+        color: #171C61;
+        font-size: rem(24);
+        font-weight: bold;
+        line-height: calc(30/24);
+        padding-bottom: rem(24);
+        border-bottom: 1px solid #ccc;
+    }
+
+    * + h3 {
+        margin-top: rem(50);
+    }
+
+    h4 {
+        font-size: rem(18);
+        font-weight: bold;
+        line-height: calc(30/14);  
+    }
+
+    * + h4 {
+        margin-top: rem(50);
+    }
+
+    * + * {
+        margin-top: rem(30);
+
+        @include mq(md) {
+            margin-top: rem(50);
+        }
+    }
+
+    p {
+        font-size: rem(16);
+        font-weight: 400;
+        line-height: calc(30/16);
+        margin-top: rem(30);
+
+        @include mq(md) {
+            margin-top: rem(50);
+        }
+    }
+
+    iframe {
+        max-width: rem(900);
+        display: block;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    ul {
+        list-style: disc;
+        font-size: rem(16);
+        line-height: calc(36/16);
+        margin-left: 1.5em;
+
+        li + li {
+            margin-top: 0;
+        }
+    }
+
+    ol {
+        counter-reset: number 0;
+        font-size: rem(16);
+        line-height: calc(36/16);
+
+        li {
+            position: relative;
+            display: flex;
+            gap: 0.5em;
+            align-items: center;
+        }
+
+        li + li {
+            margin-top: 0;
+        }
+
+        li::before {
+            counter-increment: number 1; 
+            content: counter(number);
+            border: 1px solid $black;
+            width: rem(16);
+            height: rem(16);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.75em;
+        }
+    }
+
+    a {
+        text-decoration: underline;
+        color: #00a0e9;
+        font-size: rem(16);
+        font-weight: 400;
+    }
+}
