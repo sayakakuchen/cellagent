@@ -5,7 +5,11 @@ $contact = esc_html(home_url('/contact/'));
 $reservation = esc_html(home_url('/reservation/'));
 ?>
 
-<section class="l-cta l-cta--bottom">
+<?php if( is_page('price')): ?>
+<section class="l-cta">
+<?php else: ?>
+    <section class="l-cta l-cta--bottom">
+<?php endif; ?>
     <div class="p-cta">
         <div class="p-cta__inner l-inner">
             <div class="p-cta__wrap">

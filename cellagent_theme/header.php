@@ -3,6 +3,9 @@ $home = esc_html(home_url('/'));
 $dummy = esc_html(home_url('/dummy/'));
 $contact = esc_html(home_url('/contact/'));
 $reservation = esc_html(home_url('/reservation/'));
+$price = esc_html(home_url('/price/'));
+$about = esc_html(home_url('/about/'));
+$blog = esc_html(home_url('/blog/'));
 ?>
 
 <!DOCTYPE html>
@@ -37,10 +40,10 @@ $reservation = esc_html(home_url('/reservation/'));
                             <div class="p-drawer__globalNav">
                                 <nav class="p-globalNav">
                                     <ul class="p-globalNav__links p-globalNav__links--flex">
-                                        <li class="p-globalNav__link"><a href="<?php echo $dummy; ?>">レンタル事務長さんとは</a></li>
-                                        <li class="p-globalNav__link"><a href="<?php echo $dummy; ?>">料金プラン</a></li>
+                                        <li class="p-globalNav__link"><a href="<?php echo $about; ?>">レンタル事務長さんとは</a></li>
+                                        <li class="p-globalNav__link"><a href="<?php echo $price; ?>">料金プラン</a></li>
                                         <li class="p-globalNav__link"><a href="<?php echo $home; ?>#faq">よくある質問</a></li>
-                                        <li class="p-globalNav__link"><a href="<?php echo $dummy; ?>">コラム・お役立ち情報</a></li>
+                                        <li class="p-globalNav__link"><a href="<?php echo $blog; ?>">コラム・お役立ち情報</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -69,10 +72,10 @@ $reservation = esc_html(home_url('/reservation/'));
                 <div class="p-header__globalNav">
                     <nav class="p-globalNav">
                         <ul class="p-globalNav__links">
-                            <li class="p-globalNav__link"><a href="<?php echo $dummy; ?>">レンタル事務長さんとは</a></li>
-                            <li class="p-globalNav__link"><a href="<?php echo $dummy; ?>">料金プラン</a></li>
+                            <li class="p-globalNav__link"><a href="<?php echo $about; ?>">レンタル事務長さんとは</a></li>
+                            <li class="p-globalNav__link"><a href="<?php echo $price; ?>">料金プラン</a></li>
                             <li class="p-globalNav__link"><a href="<?php echo $home; ?>#faq">よくある質問</a></li>
-                            <li class="p-globalNav__link"><a href="<?php echo $dummy; ?>">コラム・お役立ち情報</a></li>
+                            <li class="p-globalNav__link"><a href="<?php echo $blog; ?>">コラム・お役立ち情報</a></li>
                         </ul>
                     </nav>
                 </div>

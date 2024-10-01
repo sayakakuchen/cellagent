@@ -2284,6 +2284,9 @@ tbody td:first-child {
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.875;
+}
+
+.p-single__content * + p {
 	margin-top: 1.875rem;
 }
 
@@ -3712,7 +3715,7 @@ tbody tr td:nth-child(2) {
 	margin-top: 3.125rem;
 }
 
-.p-single__content p {
+.p-single__content * + p {
 	margin-top: 3.125rem;
 }
 

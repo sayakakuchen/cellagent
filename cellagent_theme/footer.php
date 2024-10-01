@@ -3,6 +3,9 @@ $home = esc_html(home_url('/'));
 $dummy = esc_html(home_url('/dummy/'));
 $contact = esc_html(home_url('/contact/'));
 $reservation = esc_html(home_url('/reservation/'));
+$price = esc_html(home_url('/price/'));
+$about = esc_html(home_url('/about/'));
+$blog = esc_html(home_url('/blog/'));
 ?>
 
 <footer class="l-footer">
@@ -18,10 +21,10 @@ $reservation = esc_html(home_url('/reservation/'));
                         <div class="p-footer__globalNav">
                             <nav class="p-globalNav">
                                 <ul class="p-globalNav__links">
-                                    <li class="p-globalNav__link p-globalNav__link--footer"><a href="<?php echo $home; ?>">レンタル事務長さんとは</a></li>
-                                    <li class="p-globalNav__link p-globalNav__link--footer"><a href="<?php echo $home; ?>#price">料金プラン</a></li>
+                                    <li class="p-globalNav__link p-globalNav__link--footer"><a href="<?php echo $about; ?>">レンタル事務長さんとは</a></li>
+                                    <li class="p-globalNav__link p-globalNav__link--footer"><a href="<?php echo $price; ?>">料金プラン</a></li>
                                     <li class="p-globalNav__link p-globalNav__link--footer"><a href="<?php echo $home; ?>#faq">よくある質問</a></li>
-                                    <li class="p-globalNav__link p-globalNav__link--footer"><a href="<?php echo $dummy; ?>">コラム・お役立ち情報</a></li>
+                                    <li class="p-globalNav__link p-globalNav__link--footer"><a href="<?php echo $blog; ?>">コラム・お役立ち情報</a></li>
                                     <li class="p-globalNav__link p-globalNav__link--footer u-mobile"><a href="<?php echo $contact; ?>">お問い合わせ</a></li>
                                 </ul>
                             </nav>
