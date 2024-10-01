@@ -1,0 +1,89 @@
+@use 'global' as *;
+
+.p-point {
+    padding-block: rem(80);
+    background: linear-gradient(180deg, #ebebeb 0%, #ebebeb 67%, #d9d9d9 67%, #d9d9d9 100%);
+}
+
+.p-point__inner {
+
+}
+
+.p-point__cards {
+    display: grid;
+    gap: rem(30);
+    margin-top: rem(40);
+
+    @include mq(md) {
+        margin-top: rem(60);
+        grid-template-columns: repeat(3,1fr);
+        gap: rem(45);
+    }
+}
+
+.p-point__card {
+    width: 80%;
+    margin-inline: auto;
+
+    @include mq(md) {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.p-point__img {
+    position: relative;
+}
+
+.p-point__number {
+    position: absolute;
+    right: 0;
+    color: #FF4D00;
+    font-size: rem(80);
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    bottom: rem(-15);
+}
+
+.p-point__text {
+    position: relative;
+    height: rem(120);
+    border-radius: rem(20);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #1555FF;
+    color: $white;
+    font-size: rem(18);
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    line-height: calc(30/22);
+    margin-top: rem(20);
+
+    @include mq(md) {
+        font-size: rem(22);
+        height: rem(142);
+        margin-top: rem(32);
+    }
+}
+
+.p-point__text::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    width: rem(30);
+    height: rem(40);
+    top: rem(-38);
+    background-color: #1555FF;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+
+    @include mq(md) {
+        width: rem(41);
+        height: rem(63);
+        top: rem(-60);
+    }
+}

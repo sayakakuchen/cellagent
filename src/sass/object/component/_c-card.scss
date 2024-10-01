@@ -1,0 +1,66 @@
+@use 'global' as *;
+
+.c-card {
+    display: block;
+}
+
+.c-card__thumbnail {
+
+}
+
+.c-card__thumbnail img {
+    aspect-ratio: 370/220;
+    height: 100%;
+    object-fit: cover;
+}
+
+.c-card__body {
+
+}
+
+.c-card__cats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(5) rem(10);
+    margin-top: rem(16);
+
+    @include mq(md) {
+        margin-top: rem(20);
+    }
+}
+
+.c-card__cat {
+    font-size: rem(14);
+    font-weight: bold;
+    color: #1555FF;
+    letter-spacing: 0.06em;
+
+    @include mq(md) {
+        font-size: rem(16);
+    }
+}
+
+.c-card__title {
+    font-size: rem(16);
+    font-weight: bold;
+    line-height: calc(28/18);
+    letter-spacing: 0.06em;
+    margin-top: rem(14);
+
+    @include mq(md) {
+        font-size: rem(18);
+    }
+}
+
+.c-card__time {
+    display: block;
+    font-size: rem(12);
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    margin-top: rem(20);
+
+    @include mq(md) {
+        font-size: rem(15);
+        margin-top: rem(20);
+    }
+}

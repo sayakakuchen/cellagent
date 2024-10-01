@@ -58,4 +58,34 @@ jQuery(function ($) {
       }
     }]
   });
+  $('.js-about-slider').slick({
+    slidesToShow: 3,
+    dots: false,
+    arrow: true,
+    autoplay: true,
+    prevArrow: '<div class="slide-arrow prev-arrow"></div>',
+    nextArrow: '<div class="slide-arrow next-arrow"></div>',
+    dotsClass: 'slider-dots',
+    responsive: [{
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
+  });
+  $('.js-pickup-slider').slick({
+    slidesToShow: 2,
+    dots: false,
+    arrow: true,
+    autoplay: true,
+    prevArrow: '<div class="slide-arrow prev-arrow"></div>',
+    nextArrow: '<div class="slide-arrow next-arrow"></div>',
+    dotsClass: 'slider-dots',
+    responsive: [{
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
+  });
 });

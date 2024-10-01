@@ -1,0 +1,121 @@
+@use 'global' as *;
+
+.p-about {
+    padding-top: rem(80);
+
+    @include mq(md) {
+        padding-top: rem(100);
+    }
+}
+
+.p-about__inner {
+
+}
+
+.p-about__body {
+    margin-top: rem( 60);
+
+    @include mq(md) {
+        margin-top: rem(110);
+    }
+}
+
+.p-about__subTitle {
+    font-size: rem(18);
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    color: #171C61;
+
+    @include mq(md) {
+        font-size: rem(24);
+    }
+}
+
+.p-about__slider {
+    margin-top: rem(20);
+
+    .slick-track {
+        display: flex;
+    }
+    .slick-slide {
+        height: auto !important;
+    }
+    .slide-arrow {
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+        @include mq(md) {
+            top: rem(-55);
+            transform: translateY(0);
+        }
+    }
+
+    .prev-arrow {
+        left: rem(-5);
+
+        @include mq(md) {
+            left: initial;
+            right: rem(75);
+        }
+    }
+    .next-arrow {
+        right: rem(-5);
+        transform: translateY(-50%) rotate(180deg);
+
+        @include mq(md) {
+            right: rem(16);
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.p-about__card {
+    background-color: #EBF7FF;
+    border-radius: rem(10);
+    padding-bottom: rem(20);
+    margin-inline: rem(10);
+
+    @include mq(md) {
+        border-radius: rem(20);
+        padding-bottom: rem(30);
+        margin-inline: rem(14);
+    }
+}
+
+.p-about__cardTitle {
+    text-align: center;
+    color: #1555FF;
+    font-size: rem(18);
+    font-weight: bold;
+    margin-top: rem(20);
+    
+    @include mq(md) {
+        font-size: rem(21);
+    }
+}
+
+.p-about__img {
+    border-radius: rem(20) rem(20) 0 0;
+    overflow: hidden;
+}
+
+.p-about__lists {
+    padding-inline: rem(16);
+    margin-top: rem(20);
+
+    @include mq(md) {
+        padding-inline: rem(27);
+    }
+
+}
+
+.p-about__list {
+    font-size: rem(16);
+    font-weight: 500;
+    line-height: calc(26/18);
+
+    @include mq(md) {
+        font-size: rem(18);
+    }
+}
